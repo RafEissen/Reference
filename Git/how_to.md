@@ -11,6 +11,6 @@
      > `>` git add '*your file*' <br>
   > `>` git commit -m "*message*" <br>
   > `>` (optional) git branch -M main <br>
-  > `>` git push -u origin main *or* <br>
-  > `>` git push
+  > `>` git push -u origin main <br>
+  > `>` (or simply) git push
 

@@ -91,7 +91,7 @@ Push all branches
 
 > `>`  git remote add origin git@github.com:Ra-----en/myCV2.git
 
-- after you connected to your repo it's time to push:
+- after you connected to your repo under different branch (not main) - it's time to push:
 
 > `>` git push -u origin dev
 

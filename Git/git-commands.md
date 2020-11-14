@@ -95,7 +95,16 @@ Push all branches
 
 > `>` git push -u origin dev
 
+## ////////////////////////////// `<git rm>` 
 
+Remove files and folders from the working tree and from the index
 
+> `>` git rm -rf <*folder*>
 
+After that proceed with:
 
+> `>` git add <*file*> <br>
+
+> `>` git commit -m "..." <br>
+
+> `>` git push 

@@ -17,6 +17,9 @@
      > `>` git add '*your file*' <br>
   > `>` git commit -m "*message*" <br>
   > `>` (optional) git branch -M main <br>
-  > `>` git push -u origin main <br>
-  > `>` (or simply) git push
+  > `>` git push
+
+If you push your files under different from *main* branch - you have to change the last command:
+
+  > `>` git push -u origin <*branch*> <br>
 

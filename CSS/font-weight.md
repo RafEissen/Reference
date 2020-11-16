@@ -106,8 +106,21 @@ Selects a font that is classified as oblique. If no oblique version of the face 
 
 ![font-style-normal](pics/font-style-o.png)
 
+## ////////////////////////////// font-variant
+
+<br>
+
+Specifies whether or not a text should be displayed in a _small-caps_ font.
+
+**Property Values:**
+
+<u>**normal**</u>
+
+The browser displays a normal font. This is default.
+
 ## ////////////////////////////// font-weight
 
+<br>
 Sets the weight (or boldness) of the font.
 
 **Property Values:**

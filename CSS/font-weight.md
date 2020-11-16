@@ -11,11 +11,11 @@ By allowing authors to provide their own fonts, @font-face makes it possible to 
 
 You must first define a name for the font (e.g. FontName), and then point to the font file.
 
-![font-face](./pics/font-face.png)
+![font-face](pics/font-face.png)
 
 To use the aforementioned font ‘FontName’ you need only call its name in the font stack:
 
-![font-face](./pics/font-family.png)
+![font-face](pics/font-family.png)
 
 Example: rgd.html, 3rd part; rgd.css, 3rd part
 
@@ -32,7 +32,7 @@ Required. Defines the URL(s) where the font should be downloaded from. If the lo
 
 Example: Here I can supply different values for the src property by separating the values with commas, as I’ve done in the code example. This utilises the power of the cascade to allow different fall-back values, which will come in handy in a later example.
 
-![font-face](./pics/font-face-ex.png)
+![font-face](pics/font-face-ex.png)
 
 <u>**format**</u> 
 
@@ -82,41 +82,42 @@ Start with the font you want, and always end with a generic family, to let the b
 **Note**: If the name of a font is more than one word, it must be in quotation marks, like: “Times New Roman”.
 
 
-////////////////////////////// <font-style>
+## ////////////////////////////// font-style
+<br>
+Specifies the font style for a text. 
+<br><br>
+Example: text.html, 1st part; text.css, 1st part <br><br>
 
-Specifies the font style for a text.
+**Property Values:**
 
-Example: text.html, 1st part; text.css, 1st part
-
-Property Values:
-
-normal:
+<u>**normal**</u> 
 
 The browser displays a normal font style. This is default.
 
+![font-style-normal](pics/font-style-n.png)
 
-
-italic:
+<u>**italic**</u> 
 
 The browser displays an italic font style.
 
+![font-style-normal](pics/font-style-i.png)
 
+<u>**oblique**</u> 
 
-oblique:
 
 Selects a font that is classified as oblique. If no oblique version of the face is available, one classified as italic is used instead. Generally, there’s little, if any, difference between italic and oblique.
  
+![font-style-normal](pics/font-style-o.png)
 
 
-
-////////////////////////////// <font-weight>
+## ////////////////////////////// font-weight
 
 Sets the weight (or boldness) of the font.
 
+**Property Values:**
 
-Property Values:
+<u>**normal**</u> 
 
-normal:
 
 Defines normal characters. This is default.
 

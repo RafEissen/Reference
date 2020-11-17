@@ -1,4 +1,4 @@
-# Fonts\*
+# Fonts\* proceed with rem's in font-size
 
 ## ////////////////////////////// <@font-face()>
 
@@ -76,6 +76,56 @@ Start with the font you want, and always end with a generic family, to let the b
 **Note**: Separate each value with a comma.
 
 **Note**: If the name of a font is more than one word, it must be in quotation marks, like: “Times New Roman”.
+
+## ////////////////////////////// font-size
+
+Sets the size of the text.
+
+**Property Values:**
+
+<u>**x-small, small, medium, large, x-large etc.**</u>
+
+Absolute-size keywords, based on the user's default font size (which is medium).
+
+<u>**larger, smaller**</u>
+
+Relative-size keywords. The font will be larger or smaller relative to the parent element's font size, roughly by the ratio used to separate the absolute-size keywords above.
+
+<u>**length**</u>
+
+For most font-relative units (such as _em_ and _ex_), the font size is relative to the parent element's font size.
+<br>
+
+## Pixels
+
+Setting the font size in pixel values (_px_) is a good choice when you need pixel accuracy. A _px_ value is static. This is an OS-independent and cross-browser way of literally telling the browsers to render the letters at exactly the number of pixels in height that you specified. The results may vary slightly across browsers, as they may use different algorithms to achieve a similar effect.
+<br>
+
+**Note:** Defining font sizes in _px_ is <u>_not accessible_</u>, because the user cannot change the font size in some browsers. For example, users with limited vision may wish to set the font size much larger than the size chosen by a web designer.
+<br>
+
+## Ems
+
+Another way of setting the font size is with _em_ values. The size of an _em_ value su dynamic. When defining the _font-size_ property, an _em_ is equal to the font size of the element on which the _em_ is used. If you haven't set the font size anywhere on the page, then it is the browser default, which is often 16px. So, by default 1em = 16px, and 2em = 32px. <br>
+
+If you set a _font-size_ of 20px on the body element, then 1em = 20px and 2em = 40px.
+
+In order to calculate the _em_ equivalent for any pixel value required, you can use this:
+
+> em = desired element pixel value / parent element font-size in pixels.
+
+For example, suppose the font-size of the body of the page is set to 16px. If the font-size you want is 12px, then you should specify 0.75em (because 12/16 = 0.75). <br><br>
+<u>**%**</u>
+
+Relative to the parent element's font size.
+
+## Rem (root em)
+
+The font behaves like the em, but instead of being relative to the _font-size_ value of hte current element, it's relative to the _font-size_ value of hte document root (the html element).
+
+Although _em_ is quite useful, it's not without its drawbacks, which become most apparent when nesting elements.
+
+![em_example](pics/em-example.png)
 
 ## ////////////////////////////// font-style
 

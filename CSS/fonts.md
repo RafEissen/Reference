@@ -1,7 +1,5 @@
 # Fonts\*
 
-proceed with font-weight
-
 ## ////////////////////////////// <@font-face()>
 
 <br>
@@ -117,6 +115,14 @@ Specifies whether or not a text should be displayed in a _small-caps_ font.
 <u>**normal**</u>
 
 The browser displays a normal font. This is default.
+
+[same as font-weight](#-font-weight)
+
+<u>**small-caps**</u>
+
+In small-caps font, all lowercase letters are converted to uppercase letters. However, the converted uppercase letters appears in a smaller font size than original uppercase letters in the text.
+
+![small-caps](pics/small-caps.png)
 
 ## ////////////////////////////// font-weight
 

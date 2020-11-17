@@ -2,7 +2,7 @@
 
 <br>
 
-Before setting your ssh you first have to configure your global username and email address after installing Git.
+Before setting your SSH-Keys, you first have to configure your global username and email address after installing Git.
 <br>
 
 > `>` git config --global user.name "_your-name_" <br>

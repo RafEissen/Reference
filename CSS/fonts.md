@@ -1,4 +1,4 @@
-# Fonts\* proceed with rem's in font-size
+# Fonts
 
 ## ////////////////////////////// <@font-face()>
 
@@ -127,7 +127,7 @@ Although _em_ is quite useful, it's not without its drawbacks, which become most
 
 ![em_example](pics/em-example.png) <br>
 
-If you presume that the root font-size of the document is the common browser default of 16px, the first _li_ element will have a calculated font-size of 32px (16 \_ 2). But the _font-size_ of the _li_ elements nested inside the first would be calculated relative to the inherited value, making them 64px (32 \* 2).
+If you presume that the root font-size of the document is the common browser default of 16px, the first _li_ element will have a calculated font-size of 32px (16 \* 2). But the _font-size_ of the _li_ elements nested inside the first would be calculated relative to the inherited value, making them 64px (32 \* 2).
 
 This is where the _rem_ unit becomes essential. Here's the same code as the previous example,only now using the _rem_ in place of the _em_ unit:
 
@@ -169,6 +169,59 @@ The advantage of using these units is that when elements are nested, the units r
 ```
 
 No Calculation Required!
+
+## ////////////////////////////// font-size-adjust
+
+Gives you better control of the font size when the first selected font is not available.
+
+When a font is not available, the browser uses the second specified font. This could result in a big change for the font size.
+
+The _font-size-adjust_ property sets the size of lower-case letters relative to the current font size (which defines the size of upper-case letters).
+
+Example: rgd.html, 3rd part; rgd.css, 3rd part
+
+<!-- [rgd.html]() -->
+
+**Property Values:**
+
+<u>**none**</u>
+
+Choose the size of the font based only on the _font-size_ property.
+
+<u>**number**</u>
+
+Choose the size of the font so that its lowercase letters (as determined by the x-height of the font) are the specified number times the _font-size_.
+
+The number specified should generally be the aspect ratio (ratio of x-height to font size) of the first choice _font-family_. This means that the first-choice font, when available, will appear the same size in browsers, whether or not they support _font-size-adjust_.
+
+`0` yields text of zero height (hidden text).
+
+**Explanation:**
+
+The only drawback in using font stacks in CSS is their size difference: your first choice font may look great at 16px, but if that font isn't available, the next fallback may appear smaller or have different proportions and be harder to read at that size. <br>
+To combat this, the _font-size-adjust_ property lets you dynamically alter the _font-size_ property to ensure a regular appearance no matter which font is used from the stack. <br>
+The _font-size-adjust_ property takes a single decimal value; here's the syntax:
+
+```
+E {
+    font-size-adjust: number;
+}
+```
+
+The _number_ value is the proportion of the total height that is occupied by a lowercase _x_ character (known as the _x-height_). In other words, a font might be 16px high in total, but the height of the lowercase _x_ might be half that (8px), which gives an x-height ratio of 0.5 (8 divided by 16):
+
+```
+p {
+    font-size-adjust: 0.5;
+}
+```
+
+By using _font-size-adjust_, you can ensure that no matter which font is displayed, the x-height always has the same value, and legibility does not suffer.
+
+Example:
+
+![html & css](pics/font-size-adjust.png)
+![result (in firefox)](pics/font-size-adjust-result.png)
 
 ## ////////////////////////////// font-style
 
@@ -251,6 +304,10 @@ Note that when using relative weights, only four font weights are considered - t
 The numerical values 100 to 900 roughly correspond to the following common weight names:
 
 ![weight-name-mapping](pics/weight-name-mapping.png)
+
+```
+
+```
 
 ```
 

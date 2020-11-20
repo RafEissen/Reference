@@ -221,6 +221,9 @@ By using _font-size-adjust_, you can ensure that no matter which font is display
 Example:
 
 ![html & css](pics/font-size-adjust.png)
+
+## Output:
+
 ![result (in firefox)](pics/font-size-adjust-result.png)
 
 ## ////////////////////////////// font-style

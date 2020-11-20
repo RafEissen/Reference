@@ -178,10 +178,6 @@ When a font is not available, the browser uses the second specified font. This c
 
 The _font-size-adjust_ property sets the size of lower-case letters relative to the current font size (which defines the size of upper-case letters).
 
-Example: rgd.html, 3rd part; rgd.css, 3rd part
-
-<!-- [rgd.html]() -->
-
 **Property Values:**
 
 <u>**none**</u>
@@ -218,13 +214,18 @@ p {
 
 By using _font-size-adjust_, you can ensure that no matter which font is displayed, the x-height always has the same value, and legibility does not suffer.
 
-Example:
+## Example:
 
 ![html & css](pics/font-size-adjust.png)
 
 ## Output:
 
 ![result (in firefox)](pics/font-size-adjust-result.png)
+
+## Files:
+
+[rgd.html, 3rd part](html/rgd.html) <br>
+[rgd.css, 3rd part](css/rgd.css)
 
 ## ////////////////////////////// font-style
 

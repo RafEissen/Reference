@@ -1,0 +1,73 @@
+/* //////////////////////////////////////////////////// */
+
+/* text.html, 1st part */
+
+.breakThem {
+  width: 30vh;
+  border: solid thick;
+  border-color: brown;
+  padding: 1.5vh;
+  word-break: break-word;
+  font-weight: 400;
+  font-variant: small-caps;
+}
+
+/* //////////////////////////////////////////////////// */
+
+/* text.html, 2nd part */
+
+.overflowIt {
+  width: 30vh;
+  border: solid thick;
+  border-color: purple;
+  padding: 1.5vh;
+  overflow-wrap: break-word;
+}
+
+/* //////////////////////////////////////////////////// */
+
+/* text.html, 3rd part */
+
+.hyphenIt {
+  width: 30vh;
+  border: solid thick;
+  border-color: grey;
+  padding: 1.5vh;
+}
+
+.hyphenIt.auto {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+/* //////////////////////////////////////////////////// */
+
+/* text.html, 4th part */
+
+.blending {
+  margin-top: 2vh;
+  border: solid black;
+  padding: 3vh;
+  background-image: url(/pics/blend.png);
+  background-repeat: no-repeat;
+  width: 35vh;
+  height: 23vh;
+  font-size: 7vh;
+  color: white;
+  text-align: left;
+  background-color: red;
+  background-blend-mode: color;
+}
+
+/* //////////////////////////////////////////////////// */
+
+/* text.html, 5th part */
+
+:root {
+  --main-brd-color: beige;
+}
+
+p {
+  background-color: var(--main-brd-color);
+}

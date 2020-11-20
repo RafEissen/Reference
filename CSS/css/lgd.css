@@ -1,0 +1,58 @@
+/* ////////////////////////////////////////////////////////////////////////////// */ 
+
+/* bgd.html, 1st part */
+
+#grad4 {
+    height: 100px;
+    background-image: linear-gradient( black, white 75%, red);
+    margin-bottom: 3vh;
+
+  }
+
+/* ////////////////////////////////////////////////////////////////////////////// */ 
+
+/* bgd.html, 2nd part */
+
+  #grad5 {
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    height: 100px;
+    background-image: repeating-linear-gradient( white, black 25%);
+  }
+
+/* ////////////////////////////////////////////////////////////////////////////// */ 
+
+/* bgd.html, 3rd part */
+
+#grad6 {
+  margin-top: 2vh;
+  margin-bottom: 3vh;
+  height: 100px;
+  background-image: repeating-linear-gradient(45deg, black, white 2px, red 10px);
+}
+
+/* ////////////////////////////////////////////////////////////////////////////// */ 
+
+/* bgd.html, 4th part */
+
+p {
+    height: 45vh;
+    background-image: 
+    linear-gradient(120deg, rgba(237, 246, 251, 0.5),
+     rgba(103, 46, 164, 0.5)), 
+     url(/CSS-Ref/pics/mr_robot.jpg);
+     background-repeat: no-repeat;
+     background-size: 90vh;
+     background-blend-mode: color;
+     border: dotted 2vh;
+     /* padding: 3vh; */
+     background-origin: padding-box;
+     text-align: center 2vh;
+     padding-top: 5vh;
+     padding-left: 5vh;
+     font-size: 3vh;
+
+     
+
+}
+

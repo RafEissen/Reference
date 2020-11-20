@@ -1,0 +1,130 @@
+/* txtcolor.html, 1st part */
+
+.example {
+    text-align: center;
+    border: solid;
+    border-width: thick;
+}
+
+h1 {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////// */ 
+/* txtcolor.html, 2nd part */
+
+.exampleII {
+    /* length-percentage examples */
+    width: calc(100% - 200px);
+    height: 130px;
+    margin: 1rem;
+    padding: 2vh;
+    border-radius: 10px 10%;
+    font-size: 250%;
+    line-height: 1.5em;
+  
+    /* length examples */
+    text-shadow: 1px 1px 1px red;
+    border: 10px dotted rgba(255, 0, 0, .9);
+    letter-spacing: 3px;
+    background-color: rgb(251, 232, 232);
+    background-clip: content-box;
+
+  
+    /* percentage example */
+    text-size-adjust: 20%;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////// */ 
+
+/* txtcolor.html, 3rd part */
+
+div {
+    
+    border: 0.5rem outset pink;
+    outline: 0.5rem solid khaki;
+    box-shadow: 0 0 0 2rem skyblue;
+    border-radius: 12px;
+    font: bold 1rem sans-serif;
+    margin: 2.5rem;
+    padding: 1rem;
+    outline-offset: 0.5rem;
+  }
+
+  /* ////////////////////////////////////////////////////////////////////////////// */ 
+
+/* txtcolor.html, 4th part */
+
+/* Define look of the table */
+
+table {
+    border-width: 3px;
+    background-color: #52E396
+}
+
+tr, td {
+    padding: 2px;
+}
+
+/* border-style example classes */
+
+.b1 {border-style:none;}
+.b2 {border-style:hidden;}
+.b3 {border-style:dotted;}
+.b4 {border-style:dashed;}
+.b5 {border-style:solid;}
+.b6 {border-style:double;}
+.b7 {border-style:groove;}
+.b8 {border-style:ridge;}
+.b9 {border-style:inset;}
+.b10 {border-style:outset;}
+
+  /* ////////////////////////////////////////////////////////////////////////////// */ 
+
+  /* txtcolor.html, 5th part */
+
+
+.collapse {
+    border-collapse: collapse;
+}
+
+.separate {
+    border-collapse: separate; 
+}
+
+table {
+    display: inline-table;
+    margin: 1em;
+    border: dashed 5px; 
+}
+
+table th,
+table td {
+    border: solid 3px; 
+}
+
+.fx { border-color: orange blue; }
+.gk { border-color: black red; }
+.ed { border-color: blue gold; }
+.tr { border-color: aqua; }
+.sa { border-color: silver blue; }
+.wk { border-color: gold blue; }
+.ch { border-color: red yellow green blue; }
+.bk { border-color: navy blue teal aqua; }
+.op { border-color: red; }
+
+  /* ////////////////////////////////////////////////////////////////////////////// */ 
+
+  /* txtcolor.html, 6th part */
+
+
+  #stiky {
+    background-image: url(/CSS-Ref/pics/stickman.png), linear-gradient(rgb(147, 147, 88), rgb(147, 147, 88), rgb(147, 147, 88));
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30vh;
+    height: 30vh;
+    border: solid thick;
+    padding: 1vh;
+  }

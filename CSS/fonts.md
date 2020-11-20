@@ -104,7 +104,7 @@ Setting the font size in pixel values (_px_) is a good choice when you need pixe
 **Note:** Defining font sizes in _px_ is <u>_not accessible_</u>, because the user cannot change the font size in some browsers. For example, users with limited vision may wish to set the font size much larger than the size chosen by a web designer.
 <br>
 
-## Ems
+## Em
 
 Another way of setting the font size is with _em_ values. The size of an _em_ value su dynamic. When defining the _font-size_ property, an _em_ is equal to the font size of the element on which the _em_ is used. If you haven't set the font size anywhere on the page, then it is the browser default, which is often 16px. So, by default 1em = 16px, and 2em = 32px. <br>
 
@@ -125,12 +125,55 @@ The font behaves like the em, but instead of being relative to the _font-size_ v
 
 Although _em_ is quite useful, it's not without its drawbacks, which become most apparent when nesting elements.
 
-![em_example](pics/em-example.png)
+![em_example](pics/em-example.png) <br>
+
+If you presume that the root font-size of the document is the common browser default of 16px, the first _li_ element will have a calculated font-size of 32px (16 \_ 2). But the _font-size_ of the _li_ elements nested inside the first would be calculated relative to the inherited value, making them 64px (32 \* 2).
+
+This is where the _rem_ unit becomes essential. Here's the same code as the previous example,only now using the _rem_ in place of the _em_ unit:
+
+> li { font-size: 2rem; }
+
+Again, presuming a root _font-size_ of 16px, the first _li_ has a calculated _font-size_ of 32px. This time, however, the _font-size_ of the nested _li_ elements is also relative to the root value, the same as their parent. And no matter how many nested layers down you go, that value is always relative to the root.
+
+## Viewport Units
+
+## VW
+
+Developers tend to use %-values for layout elements, as they scale fluidly across the range of different screen sizes that websites need to cater to. Percentages are useful at a top level, but - as you just saw with _em_ units - you can run into difficulties when using % with nested elements.
+
+This code illustrates the problem:
+
+```
+<div class="parent">
+    <div class="child">...</div>
+</div>
+```
+
+Now, imagine that `.parent` is 75% of the viewport width, and you want `.child` to be 65% of hte viewport width - not the width of its parent. To do this, you have to divide 65 by 75, giving you a result of 86.666%. This calculation is simple enough, but the deeper the nesting goes, the more complex the calculations become.
+
+A better solution is to use viewport-relative units - _vh_ and _vw_ - which represent viewport height and width, respectively. Each unit of value represents 1% of the appropriate viewport dimension: 1vh is 1% of the viewport height, and 1vw is 1% of the viewport width. For example, the following code makes an element 75% of the viewport width and 50% of its height:
+
+```
+E {
+    height: 50vh;
+    width: 75vw;
+}
+```
+
+The advantage of using these units is that when elements are nested, the units remain relative to the viewport. So, in the case of my previous example, to make .child 65% of hte total viewport widthm you simply do this:
+
+```
+.child {
+    width: 65vw;
+}
+```
+
+No Calculation Required!
 
 ## ////////////////////////////// font-style
 
 <br>
-Specifies the font style for a text. 
+Specifies the font style for a text.
 <br><br>
 Example: text.html, 1st part; text.css, 1st part <br><br>
 
@@ -208,3 +251,7 @@ Note that when using relative weights, only four font weights are considered - t
 The numerical values 100 to 900 roughly correspond to the following common weight names:
 
 ![weight-name-mapping](pics/weight-name-mapping.png)
+
+```
+
+```

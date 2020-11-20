@@ -1,6 +1,14 @@
 # Fonts
 
-## ////////////////////////////// <@font-face()>
+[font-face](#-font-face) <br>
+[font-family](#-font-family) <br>
+[font-size](#-font-size) <br>
+[font-size-adjust](#-font-size-adjust) <br>
+[font-style](#-font-style) <br>
+[font-variant](#-font-variant) <br>
+[font-weight](#-font-weight)
+
+## //////////////////////////////////////////////////////////// <@font-face()>
 
 <br>
 CSS @-rule specifies a custom font with which to display text; the font can be loaded from either a remote server or a locally-installed font in the user’s own computer.
@@ -15,9 +23,7 @@ To use the aforementioned font ‘FontName’ you need only call its name in the
 
 ![font-face](pics/font-family.png)
 
-Example: rgd.html, 3rd part; rgd.css, 3rd part
-
-**Property Values:**
+## Property Values:
 
 <u>**font-family**</u>
 
@@ -55,7 +61,7 @@ This format was created by Microsoft (the original innovators of @font-face) and
 
 The WOFF format was initially created as a reaction to OTF and TTF, in part, because these formats could easily (and illegally) be copied.
 
-## ///////////////////////////// font-family
+## //////////////////////////////////////////////////////////// font-family
 
 <br>
 
@@ -77,11 +83,13 @@ Start with the font you want, and always end with a generic family, to let the b
 
 **Note**: If the name of a font is more than one word, it must be in quotation marks, like: “Times New Roman”.
 
-## ////////////////////////////// font-size
+<br>
+
+## //////////////////////////////////////////////////////////// font-size
 
 Sets the size of the text.
 
-**Property Values:**
+## Property Values:
 
 <u>**x-small, small, medium, large, x-large etc.**</u>
 
@@ -170,7 +178,12 @@ The advantage of using these units is that when elements are nested, the units r
 
 No Calculation Required!
 
-## ////////////////////////////// font-size-adjust
+## Example:
+
+[rgd.html, 3rd part](html/rgd.html); <br>
+[rgd.css, 3rd part](css/rgd.css) <br><br>
+
+## //////////////////////////////////////////////////////////// font-size-adjust
 
 Gives you better control of the font size when the first selected font is not available.
 
@@ -178,7 +191,7 @@ When a font is not available, the browser uses the second specified font. This c
 
 The _font-size-adjust_ property sets the size of lower-case letters relative to the current font size (which defines the size of upper-case letters).
 
-**Property Values:**
+## Property Values:
 
 <u>**none**</u>
 
@@ -227,14 +240,13 @@ By using _font-size-adjust_, you can ensure that no matter which font is display
 [rgd.html, 3rd part](html/rgd.html) <br>
 [rgd.css, 3rd part](css/rgd.css)
 
-## ////////////////////////////// font-style
+## //////////////////////////////////////////////////////////// font-style
 
 <br>
 Specifies the font style for a text.
 <br><br>
-Example: text.html, 1st part; text.css, 1st part <br><br>
 
-**Property Values:**
+## Property Values:
 
 <u>**normal**</u>
 
@@ -254,13 +266,18 @@ Selects a font that is classified as oblique. If no oblique version of the face 
 
 ![font-style-normal](pics/font-style-o.png)
 
-## ////////////////////////////// font-variant
+## Example:
+
+[text.html, 1st part](html/text.html) <br>
+[text.css, 1st part](css/text.css) <br><br>
+
+## //////////////////////////////////////////////////////////// font-variant
 
 <br>
 
 Specifies whether or not a text should be displayed in a _small-caps_ font.
 
-**Property Values:**
+## Property Values:
 
 <u>**normal**</u>
 
@@ -274,12 +291,13 @@ In small-caps font, all lowercase letters are converted to uppercase letters. Ho
 
 ![small-caps](pics/small-caps.png)
 
-## ////////////////////////////// font-weight
+## //////////////////////////////////////////////////////////// font-weight
 
 <br>
-Sets the weight (or boldness) of the font.
+Sets the weight (or boldness) of the font. 
+<br><br>
 
-**Property Values:**
+## Property Values:
 
 <u>**normal**</u>
 
@@ -308,11 +326,3 @@ Note that when using relative weights, only four font weights are considered - t
 The numerical values 100 to 900 roughly correspond to the following common weight names:
 
 ![weight-name-mapping](pics/weight-name-mapping.png)
-
-```
-
-```
-
-```
-
-```

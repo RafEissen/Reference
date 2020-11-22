@@ -28,12 +28,14 @@ Example :
 
 Output :
 
-Reading package lists... Done <br>
-Building dependency tree <br>
-Reading state information... Done <br>
-gpg is already the newest version (2.2.19-3ubuntu2). <br>
-gpg set to manually installed. <br>
-The following packages were automatically installed and are no longer required: <br>
-libfprint-2-tod1 libllvm9 python3-click python3-colorama <br>
-Use 'sudo apt autoremove' to remove them. <br>
+```
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+gpg is already the newest version (2.2.19-3ubuntu2).
+gpg set to manually installed.
+The following packages were automatically installed and are no longer required:
+libfprint-2-tod1 libllvm9 python3-click python3-colorama
+Use 'sudo apt autoremove' to remove them.
 0 upgraded, 0 newly installed, 0 to remove and 26 not upgraded.
+```

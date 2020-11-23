@@ -46,5 +46,5 @@ A identifier matching the value of a `@counter-style` or one of the predefined s
 
 ## Example Files:
 
-[lists.html](/html/lists.html) <br>
-[lists.css](/css/lists.css)
+[lists.html, 1st part](html/lists.html) <br>
+[lists.css, 1st part](css/lists.css)

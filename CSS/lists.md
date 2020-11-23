@@ -10,6 +10,10 @@ Specifies the type of list item marker (such as a disc, character, or custom cou
 
 ## Property Values:
 
+<u>**none**</u>
+
+No item marker is shown.
+
 <u>**disc**</u>
 
 Default value. The marker is a filled circle.
@@ -21,10 +25,6 @@ Default value. The marker is a filled circle.
 The marker is a hollow circle.
 
 ![list-style-type-circle](pics/list-style-type-circle.png)
-
-<u>**none**</u>
-
-No item marker is shown.
 
 <u>**string**</u>
 

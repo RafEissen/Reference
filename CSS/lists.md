@@ -48,3 +48,22 @@ A identifier matching the value of a `@counter-style` or one of the predefined s
 
 [lists.html, 1st part](html/lists.html) <br>
 [lists.css, 1st part](css/lists.css)
+
+## //////////////////////////////////////////////////////////// list-style-image
+
+Sets an image to be used as the list item marker.
+
+## Property Values:
+
+<u>**url**</u>
+
+The path to the image to be used as a list-item marker. In example figure the load icon is used.
+
+![load_icon](pics/lists-style-image.png)
+
+## Example Files:
+
+[lists.html, 2nd part](html/lists.html) <br>
+[lists.css, 2nd part](css/lists.css)
+
+[This is the link to the 1st part](#1st_part)

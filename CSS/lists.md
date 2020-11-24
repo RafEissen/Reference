@@ -63,7 +63,7 @@ The path to the image to be used as a list-item marker. In example figure the lo
 
 ## Example Files:
 
-[lists.html, 2nd part](html/lists.html) <br>
+[lists.html, 2nd part](html/lists.html/#1st_part) <br>
 [lists.css, 2nd part](css/lists.css)
 
 [This is the link to the 1st part](#1st_part)

@@ -4,4 +4,10 @@
 
 .nasa {
   list-style-type: disc;
+  list-style-position: outside;
+  /* list-style-image: url(/pics/load_icon.svg); */
+}
+
+li {
+  background-color: lightblue;
 }

@@ -25,11 +25,11 @@ To use the aforementioned font ‘FontName’ you need only call its name in the
 
 ## Property Values:
 
-<u>**font-family**</u>
+<ins>**font-family**</ins>
 
 Required. Defines then name of the font, doesn’t refer to one.
 
-<u>**src**</u>
+<ins>**src**</ins>
 
 Required. Defines the URL(s) where the font should be downloaded from. If the local() function is provided, specifying a font name to look for on the user’s computer, and the user agent finds a match, that local font is used. Otherwise, the font resource specified using url() function is downloaded and used.
 
@@ -37,7 +37,7 @@ Example: Here I can supply different values for the src property by separating t
 
 ![font-face](pics/font-face-ex.png)
 
-<u>**format**</u>
+<ins>**format**</ins>
 
 Is used to specify the font type.
 
@@ -91,15 +91,15 @@ Sets the size of the text.
 
 ## Property Values:
 
-<u>**x-small, small, medium, large, x-large etc.**</u>
+<ins>**x-small, small, medium, large, x-large etc.**</ins>ins
 
 Absolute-size keywords, based on the user's default font size (which is medium).
 
-<u>**larger, smaller**</u>
+<ins>**larger, smaller**</ins>
 
 Relative-size keywords. The font will be larger or smaller relative to the parent element's font size, roughly by the ratio used to separate the absolute-size keywords above.
 
-<u>**length**</u>
+<ins>**length**</ins>
 
 For most font-relative units (such as _em_ and _ex_), the font size is relative to the parent element's font size.
 <br>
@@ -124,7 +124,7 @@ In order to calculate the _em_ equivalent for any pixel value required, you can 
 
 For example, suppose the font-size of the body of the page is set to 16px. If the font-size you want is 12px, then you should specify 0.75em (because 12/16 = 0.75). <br><br>
 
-### <u>**%**</u>
+### <ins>**%**</ins>
 
 Relative to the parent element's font size.
 
@@ -190,15 +190,15 @@ Gives you better control of the font size when the first selected font is not av
 
 When a font is not available, the browser uses the second specified font. This could result in a big change for the font size.
 
-The _font-size-adjust_ property sets the size of lower-case letters relative to the current font size (which defines the size of upper-case letters).
+The _font-size-adjust_ property sets the size of lower-case letters relative to the current font size (which defines the size of upper-case letters).ins
 
 ## Property Values:
 
-<u>**none**</u>
+<ins>**none**</ins>
 
 Choose the size of the font based only on the _font-size_ property.
 
-<u>**number**</u>
+<ins>**number**</ins>
 
 Choose the size of the font so that its lowercase letters (as determined by the x-height of the font) are the specified number times the _font-size_.
 
@@ -249,19 +249,19 @@ Specifies the font style for a text.
 
 ## Property Values:
 
-<u>**normal**</u>
+<ins>**normal**</ins>
 
 The browser displays a normal font style. This is default.
 
 ![font-style-normal](pics/font-style-n.png)
 
-<u>**italic**</u>
+<ins>**italic**</ins>
 
 The browser displays an italic font style.
 
 ![font-style-normal](pics/font-style-i.png)
 
-<u>**oblique**</u>
+<ins>**oblique**</ins>
 
 Selects a font that is classified as oblique. If no oblique version of the face is available, one classified as italic is used instead. Generally, there’s little, if any, difference between italic and oblique.
 
@@ -280,13 +280,13 @@ Specifies whether or not a text should be displayed in a _small-caps_ font.
 
 ## Property Values:
 
-<u>**normal**</u>
+<ins>**normal**</ins>
 
 The browser displays a normal font. This is default.
 
 [same as font-weight](#-font-weight)
 
-<u>**small-caps**</u>
+<ins>**small-caps**</ins>
 
 In small-caps font, all lowercase letters are converted to uppercase letters. However, the converted uppercase letters appears in a smaller font size than original uppercase letters in the text.
 
@@ -300,13 +300,13 @@ Sets the weight (or boldness) of the font.
 
 ## Property Values:
 
-<u>**normal**</u>
+<ins>**normal**</ins>
 
 Defines normal characters. This is default. Same as 400.
 
 ![font-weight-bold](pics/font-weight-n.png)
 
-<u>**bold**</u>
+<ins>**bold**</ins>
 
 Defines bold (thick) characters. Same as 700.
 

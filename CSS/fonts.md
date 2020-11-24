@@ -114,7 +114,7 @@ Setting the font size in pixel values (_px_) is a good choice when you need pixe
 
 ## Em
 
-Another way of setting the font size is with _em_ values. The size of an _em_ value su dynamic. When defining the _font-size_ property, an _em_ is equal to the font size of the element on which the _em_ is used. If you haven't set the font size anywhere on the page, then it is the browser default, which is often 16px. So, by default 1em = 16px, and 2em = 32px. <br>
+Another way of setting the font size is with _em_ values. The size of an _em_ value is dynamic. When defining the _font-size_ property, an _em_ is equal to the font size of the element on which the _em_ is used. If you haven't set the font size anywhere on the page, then it is the browser default, which is often 16px. So, by default 1em = 16px, and 2em = 32px. <br>
 
 If you set a _font-size_ of 20px on the body element, then 1em = 20px and 2em = 40px.
 
@@ -123,13 +123,14 @@ In order to calculate the _em_ equivalent for any pixel value required, you can 
 > em = desired element pixel value / parent element font-size in pixels.
 
 For example, suppose the font-size of the body of the page is set to 16px. If the font-size you want is 12px, then you should specify 0.75em (because 12/16 = 0.75). <br><br>
-<u>**%**</u>
+
+### <u>**%**</u>
 
 Relative to the parent element's font size.
 
 ## Rem (root em)
 
-The font behaves like the em, but instead of being relative to the _font-size_ value of hte current element, it's relative to the _font-size_ value of hte document root (the html element).
+The font behaves like the _em_, but instead of being relative to the _font-size_ value of the current element, it's relative to the _font-size_ value of the document root (the html element).
 
 Although _em_ is quite useful, it's not without its drawbacks, which become most apparent when nesting elements.
 
@@ -157,7 +158,7 @@ This code illustrates the problem:
 </div>
 ```
 
-Now, imagine that `.parent` is 75% of the viewport width, and you want `.child` to be 65% of hte viewport width - not the width of its parent. To do this, you have to divide 65 by 75, giving you a result of 86.666%. This calculation is simple enough, but the deeper the nesting goes, the more complex the calculations become.
+Now, imagine that `.parent` is 75% of the viewport width, and you want `.child` to be 65% of the viewport width - not the width of its parent. To do this, you have to divide 65 by 75, giving you a result of 86.666%. This calculation is simple enough, but the deeper the nesting goes, the more complex the calculations become.
 
 A better solution is to use viewport-relative units - _vh_ and _vw_ - which represent viewport height and width, respectively. Each unit of value represents 1% of the appropriate viewport dimension: 1vh is 1% of the viewport height, and 1vw is 1% of the viewport width. For example, the following code makes an element 75% of the viewport width and 50% of its height:
 
@@ -168,7 +169,7 @@ E {
 }
 ```
 
-The advantage of using these units is that when elements are nested, the units remain relative to the viewport. So, in the case of my previous example, to make .child 65% of hte total viewport widthm you simply do this:
+The advantage of using these units is that when elements are nested, the units remain relative to the viewport. So, in the case of my previous example, to make `.child` 65% of the total viewport width you simply do this:
 
 ```
 .child {
@@ -311,7 +312,7 @@ Defines bold (thick) characters. Same as 700.
 
 ![font-weight-bold](pics/font-weight-b.png)
 
-<u>**bolder / lighter**</u>
+<ins>**bolder / lighter**</ins>
 
 One relative font weight heavier/lighter than the parent element. For the full explanation see the section below: <br>
 

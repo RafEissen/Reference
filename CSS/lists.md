@@ -68,8 +68,8 @@ The path to the image to be used as a list-item marker. In example figure the lo
 
 [This is the link to the 1st part](#1st_part) <br>
 
-[This is the link to the 2nd part in test.html](#2nd_part)
+[This is the link to the 2nd part in test.html](html/test.html/#2nd_part)
 
 <br>
 
-[This is the link to the 2nd part in test.html](html/lists.html/#abcd)
+[This is the link to the 2nd part in test.html](html/test.html/#abcd)

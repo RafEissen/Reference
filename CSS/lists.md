@@ -72,4 +72,4 @@ The path to the image to be used as a list-item marker. In example figure the lo
 
 <br>
 
-[This is the link to the 2nd part in test.html](#abcd)
+[This is the link to the 2nd part in test.html](html/lists.html/#abcd)

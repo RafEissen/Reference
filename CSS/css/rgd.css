@@ -60,3 +60,16 @@ a[title$="Room"] {
   font-size-adjust: 0.58;
   font-size: 10px;
 }
+
+/* ////////////////////////////////////////////////////////////////////////////// */
+
+/* rgd.html, 4th part */
+
+@page :first {
+  margin-left: 50%;
+  margin-top: 50%;
+}
+
+p {
+  page-break-after: always;
+}

@@ -8,11 +8,15 @@
   </head>
 
   <body>
+    <!------------------------------------------------------------------------- 1st part------------------------------------------------------------------------->
+
     <h5>Radial Gradients - Evenly Spaced Color Stops</h5>
 
     <div id="grad1"></div>
 
     <hr />
+
+    <!------------------------------------------------------------------------- 2nd part------------------------------------------------------------------------->
 
     <ul>
       <li><a href="" lang="en-GB" rel="friend met">Peter</a></li>
@@ -45,6 +49,8 @@
 
     <hr />
 
+    <!------------------------------------------------------------------------- 3rd part------------------------------------------------------------------------->
+
     <p class="times">
       This text uses the Times font (10px), which is hard to read in small
       sizes.
@@ -57,5 +63,19 @@
       This is the 10px Times, but now adjusted to the aspect ratio as the
       Verdana.
     </p>
+
+    <hr />
+
+    <!------------------------------------------------------------------------- 4th part------------------------------------------------------------------------->
+
+    <p>First Page.</p>
+    <p>Second Page.</p>
+    <button>Print!</button>
+
+    <script>
+      document.querySelector("button").addEventListener("click", () => {
+        window.print();
+      });
+    </script>
   </body>
 </html>

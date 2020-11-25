@@ -28,3 +28,24 @@ Here's the button being clicked: <br>
 
 [lists.html 2nd part](html/lists.html) <br>
 [lists.css 2nd part](css/lists.css) <br>
+
+## //////////////////////////////////////////////////////////// :first
+
+The `:first` pseudo-class, used with @-rule, represents the first page of a printed document.
+
+**Note:** You can't change all CSS properties with this pseudo-class. You can only change the margins, orphans, widows, and page breaks of hte document. Furthermore, you may only use absolute-length units when defining the margins. All other properties will be ignored.
+
+## Example:
+
+Press the "Print!" button to print the example. The words on the first page should be somewhere around the center,...
+
+![first-page](pics/first-pseudo-selector-first-page.png)
+
+... while other pages will have their contents at the default position. <br>
+
+![first-page](pics/first-pseudo-selector-second-page.png)
+
+## Example Files:
+
+[rgd.html 4th part](html/rgd.html) <br>
+[rgd.css 4th part](css/rgd.css) <br>

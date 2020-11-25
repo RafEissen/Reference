@@ -11,3 +11,13 @@
 li {
   background-color: lightblue;
 }
+
+/* ////////////////////////////////////////////////////////////////////////////// */
+
+form :active {
+  color: rgb(76, 0, 255);
+}
+
+form button {
+  background: orange;
+}

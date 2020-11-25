@@ -49,3 +49,16 @@ Press the "Print!" button to print the example. The words on the first page shou
 
 [rgd.html 4th part](html/rgd.html) <br>
 [rgd.css 4th part](css/rgd.css) <br>
+
+## //////////////////////////////////////////////////////////// :first-child
+
+Represents the first element among a group of sibling elements.
+
+## Example:
+
+![first-child](pics/first-child.png)
+
+## Example Files
+
+[lists.html 3rd part](/html/lists.html) <br>
+[lists.css 3rd part](/css/lists.css) <br>

@@ -27,3 +27,9 @@ form button {
 /* ////////////////////////////////////////////////////////////////////////////// */
 
 /* lists.html, 3rd part */
+
+p:first-child {
+  color: lime;
+  background-color: black;
+  padding: 5px;
+}

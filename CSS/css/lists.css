@@ -2,10 +2,15 @@
 
 /* lists.html, 1st part */
 
-.nasa {
+ul {
   list-style-type: disc;
   list-style-position: outside;
   /* list-style-image: url(/pics/load_icon.svg); */
+}
+
+ul ::first-letter {
+  color: purple;
+  font-weight: 700;
 }
 
 li {
@@ -32,4 +37,12 @@ p:first-child {
   color: lime;
   background-color: black;
   padding: 5px;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////// */
+
+/* lists.html, 4th part */
+
+.pseudo::first-line {
+  color: blue;
 }

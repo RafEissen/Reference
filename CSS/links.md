@@ -1,8 +1,10 @@
 # Links
 
 [:active-pseudo-selector](#-active) <br>
-[list-style-position](#-list-style-position) <br>
-[list-style-type](#-list-style-type) <br>
+[:first-pseudo-element](#-first) <br>
+[:first-child](#-first-child) <br>
+[::first-letter](#-first-letter) <br>
+[::first-line](#-first-line) <br>
 
 ## //////////////////////////////////////////////////////////// :active
 
@@ -29,6 +31,8 @@ Here's the button being clicked: <br>
 [lists.html 2nd part](html/lists.html) <br>
 [lists.css 2nd part](css/lists.css) <br>
 
+[To Top](#links)
+
 ## //////////////////////////////////////////////////////////// :first
 
 The `:first` pseudo-class, used with @-rule, represents the first page of a printed document.
@@ -50,6 +54,8 @@ Press the "Print!" button to print the example. The words on the first page shou
 [rgd.html 4th part](html/rgd.html) <br>
 [rgd.css 4th part](css/rgd.css) <br>
 
+[To Top](#links)
+
 ## //////////////////////////////////////////////////////////// :first-child
 
 Represents the first element among a group of sibling elements.
@@ -62,3 +68,37 @@ Represents the first element among a group of sibling elements.
 
 [lists.html 3rd part](/html/lists.html) <br>
 [lists.css 3rd part](/css/lists.css) <br>
+
+[To Top](#links)
+
+## //////////////////////////////////////////////////////////// ::first-letter
+
+Applies styles to the first letter of the first line of a block-level element, but only when not preceded by other content (such as images or inline tables).
+
+## Example:
+
+![::first-letter](pics/first-letter.png)
+
+## Example Files:
+
+[lists.html 1st part](/html/lists.html) <br>
+[lists.css 1st part](/css/lists.css) <br>
+
+[To Top](#links)
+
+## //////////////////////////////////////////////////////////// ::first-line
+
+Applies to the first line of a block-level element.
+
+**Note:** The length of first line depends on many factors, including the width of the element, the width of the document, and the font size of the text.
+
+## Example:
+
+![::first-line](pics/first-line.png)
+
+## Example Files:
+
+[lists.html 4th part](/html/lists.html) <br>
+[lists.css 4th part](/css/lists.css) <br>
+
+[To Top](#links)

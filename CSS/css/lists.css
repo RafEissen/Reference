@@ -33,7 +33,7 @@ form button {
 
 /* lists.html, 3rd part */
 
-p:first-child {
+.fchild :first-child {
   color: lime;
   background-color: black;
   padding: 5px;
@@ -45,4 +45,20 @@ p:first-child {
 
 .pseudo::first-line {
   color: blue;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////// */
+
+/* lists.html, 5th part */
+
+article :first-of-type {
+  background-color: pink;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////// */
+
+/* lists.html, 6th part */
+
+.choose_sib :nth-child(2) {
+  background-color: magenta;
 }

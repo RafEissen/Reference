@@ -62,7 +62,7 @@
 
 /* //////////////////////////////////////////////////// */
 
-/* text.html, 5th part */
+/* text.html, to all */
 
 :root {
   --main-brd-color: beige;
@@ -70,4 +70,20 @@
 
 p {
   background-color: var(--main-brd-color);
+}
+
+/* //////////////////////////////////////////////////// */
+
+/* text.html, 5th part */
+
+.notIt {
+  width: 30vh;
+  border: solid thick;
+  border-color: purple;
+  padding: 1.5vh;
+  overflow-wrap: break-word;
+}
+
+body :not(.breakThem):not(.overflowIt):not(.blending):not(hr):not(.hyphenIt) {
+  border-color: limegreen;
 }

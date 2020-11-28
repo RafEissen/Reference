@@ -73,3 +73,9 @@ a[title$="Room"] {
 p {
   page-break-after: always;
 }
+
+button:focus {
+  background-color: lightgreen;
+  color: darkred;
+  font-weight: 700;
+}

@@ -62,3 +62,20 @@ article :first-of-type {
 .choose_sib :nth-child(2) {
   background-color: magenta;
 }
+
+/* ////////////////////////////////////////////////////////////////////////////// */
+
+/* lists.html, 6th part */
+
+/* second from the end */
+.choose_sib :nth-last-child(2) {
+  background-color: lightsalmon;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////// */
+
+/* lists.html, 7th part */
+
+.lot span:nth-last-of-type(2) {
+  background-color: rgb(103, 186, 86);
+}

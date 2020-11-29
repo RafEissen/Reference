@@ -1,6 +1,6 @@
 # Links
 
-[:active-pseudo-selector](#-active) <br>
+[:active](#-active) <br>
 [:first-pseudo-element](#-first) <br>
 [:first-child](#-first-child) <br>
 [::first-letter](#-first-letter) <br>
@@ -8,7 +8,10 @@
 [:first-of-type](#-first-of-type) <br>
 [:focus](#-focus) <br>
 [:not](#-not) <br>
-[:not](#-nth-child) <br>
+[:nth-child](#-nth-child) <br>
+[:nth-last-child](#-nth-last-child) <br>
+[:nth-last-of-type](#-nth-last-of-type) <br>
+[:nth-of-type](#-nth-of-type) <br>
 
 <hr>
 
@@ -35,7 +38,6 @@ Here's the button being clicked: <br>
 ## Example Files:
 
 [lists.html 2nd part](html/lists.html) <br>
-[lists.css 2nd part](css/lists.css) <br>
 
 [To Top](#links)
 
@@ -60,7 +62,6 @@ Press the "Print!" button to print the example. The words on the first page shou
 ## Example Files:
 
 [rgd.html 4th part](html/rgd.html) <br>
-[rgd.css 4th part](css/rgd.css) <br>
 
 [To Top](#links)
 
@@ -77,7 +78,6 @@ Represents the first element among a group of sibling elements.
 ## Example Files
 
 [lists.html 3rd part](/html/lists.html) <br>
-[lists.css 3rd part](/css/lists.css) <br>
 
 [To Top](#links)
 
@@ -94,7 +94,6 @@ Applies styles to the first letter of the first line of a block-level element, b
 ## Example Files:
 
 [lists.html 1st part](/html/lists.html) <br>
-[lists.css 1st part](/css/lists.css) <br>
 
 [To Top](#links)
 
@@ -113,7 +112,6 @@ Applies to the first line of a block-level element.
 ## Example Files:
 
 [lists.html 4th part](/html/lists.html) <br>
-[lists.css 4th part](/css/lists.css) <br>
 
 [To Top](#links)
 
@@ -130,7 +128,6 @@ Represents the first element of its type among a group of sibling elements.
 ## Example Files:
 
 [lists.html 5th part](html/lists.html) <br>
-[lists.css 5th part](css/lists.css) <br>
 
 [To Top](#links)
 
@@ -147,7 +144,6 @@ Represents an element (such as a form input) that has received focus. It is gene
 ## Example Files:
 
 [rgd.html 4th part](html/rgd.html) <br>
-[rgd.css 4th part](css/rgd.css) <br>
 
 [To Top](#links)
 
@@ -170,7 +166,6 @@ This example shows the exclusion of all the html elements except for the last cl
 ## Example Files:
 
 [text.html 5th part](html/text.html) <br>
-[text.css 5th part](css/text.css) <br>
 
 [To Top](#links)
 
@@ -211,8 +206,54 @@ It can be read as the *An+B*th element of a list.
 ## Example Files:
 
 [lists.html 6th part](html/lists.html) <br>
-[lists.css 6th part](css/lists.css) <br>
 
 [To Top](#links)
 
 <hr>
+
+## //////////////////////////////////////////////////////////// :nth-last-child()
+
+Matches elements based on their position among a group of siblings, counting from the end.
+
+**Note:** This pseudo-class is essentially the same as `:nth-child`, except it counts items backwards from the _end_, <ins>not</ins> forwards from the beginning.
+
+## Example Files:
+
+[lists.html 6th part](html/lists.html) <br>
+
+[To Top](#links)
+
+<hr>
+
+## //////////////////////////////////////////////////////////// :nth-last-of-type()
+
+Matches elements of a given type, based on their position among a group of siblings, counting from the end.
+
+**Note:** This pseudo-class is essentially the same as `:nth-of-type`, except it counts items backwards from the _end_, <ins>not</ins> forwards from the beginning.
+
+## Example:
+
+![nth-lst-of-type](pics/nth-last-of-type.png)
+
+## Example Files:
+
+[lists.html 7th part](html/lists.html) <br>
+
+[To Top](#links)
+
+<hr>
+
+## //////////////////////////////////////////////////////////// :nth-of-type()
+
+Matches elements of a given type (tag name), based on their position among a group of siblings.
+
+## Example:
+
+![nth-of-typeI.png](pics/nth-of-typeI.png) <br>
+![nth-of-typeII.png](pics/nth-of-typeII.png) <br>
+
+## Example Files:
+
+none <br>
+
+[To Top](#links)

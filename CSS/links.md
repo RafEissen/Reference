@@ -1,4 +1,4 @@
-# Links
+# Links (proceed with invalid)
 
 [:active](#-active) <br>
 [:first-pseudo-element](#-first) <br>
@@ -7,11 +7,15 @@
 [::first-line](#-first-line) <br>
 [:first-of-type](#-first-of-type) <br>
 [:focus](#-focus) <br>
+[:hover](#-hover) <br>
+[:link](#-link) <br>
 [:not](#-not) <br>
 [:nth-child](#-nth-child) <br>
 [:nth-last-child](#-nth-last-child) <br>
 [:nth-last-of-type](#-nth-last-of-type) <br>
 [:nth-of-type](#-nth-of-type) <br>
+[:valid](#-valid) <br>
+[:visited](#-visited) <br>
 
 <hr>
 
@@ -149,6 +153,44 @@ Represents an element (such as a form input) that has received focus. It is gene
 
 <hr>
 
+## //////////////////////////////////////////////////////////// :hover
+
+Matches when the user interacts with an element with a pointing device (such as mouse), but does not necessarily activate it.
+
+**Tip:** Use the `:link` selector to style links to unvisited pages, the `:visited` selector to style links to visited pages, and the `:active` selector to style the active link.
+
+**Note:** `:hover` MUST come after `:link` and `:visited` (if they are present) in the CSS definition, in order to be effective!
+
+**Note:** Make sure that content is accessible on devices with limited or non-existent hovering capabilities. Depending on the browser, the `:hover` pseudo-class might never match, match only for a moment after touching an element, or continue to match even after the user has stopped touching.
+
+## Example Files:
+
+[rgd.html 4th part](html/rgd.html) <br>
+
+[To Top](#links)
+
+<hr>
+
+## //////////////////////////////////////////////////////////// :invalid
+
+## //////////////////////////////////////////////////////////// :link
+
+Represents an element that has not yet been visited. It matches every unvisited `<a>`, `<area>`, or `<link>` element that has an `href` attribute.
+
+**Note:** The `:link` selector does not style links you have already visited.
+
+## Example:
+
+![link.ong](pics/link.png)
+
+## Example Files:
+
+[lists.html 8th part](html/lists.html) <br>
+
+[To Top](#links)
+
+<hr>
+
 ## //////////////////////////////////////////////////////////// :not()
 
 Represents elements that do not match a list of selectors. Since it prevents specific items from being selected, it is known as the _negation pseudo-class_.
@@ -257,3 +299,27 @@ Matches elements of a given type (tag name), based on their position among a gro
 none <br>
 
 [To Top](#links)
+
+## //////////////////////////////////////////////////////////// :valid
+
+Represents any `<input>` or other `<form>` element whose contents validate successfully. This allows to easily make adopt an appearance that helps the user confirm that their data is formatted properly.
+
+**Note:** The `:valid` selector only works for form elements with limitations, such as input elements with min and max attributes, email fields with a legal email, or number fields with a numeric value, etc.
+
+Following example shows that by trying to type in an illegal e-mail address the styling (which is background-color) will disappear.
+
+## Example Files:
+
+[links.html 1st part](html/links.html) <br>
+
+[To Top](#links)
+
+## //////////////////////////////////////////////////////////// :visited
+
+Represents links that the user has already visited. For privacy reasons, the styles that can be modifed using this selector are very limited.
+
+For more information on restriction for `:visited` pseudo-element, visit the official [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/:visited).
+
+[To Top](#links)
+
+<hr>

@@ -1,0 +1,21 @@
+/* //////////////////////////////////////////////////// */
+
+/* links.html, 1st part */
+
+input:valid {
+  background-color: gold;
+}
+
+/* //////////////////////////////////////////////////// */
+
+/* links.html, 2nd part */
+
+/* #fname :invalid {
+  border: 2px solid red;
+  content: "✖";
+}
+
+#fname :valid {
+  background-color: lightgreen;
+  content: "✓";
+} */

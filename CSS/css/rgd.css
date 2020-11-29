@@ -79,3 +79,8 @@ button:focus {
   color: darkred;
   font-weight: 700;
 }
+
+button:hover {
+  transition: 1s;
+  background-color: rgba(138, 43, 226, 0.5);
+}

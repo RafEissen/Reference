@@ -79,3 +79,15 @@ article :first-of-type {
 .lot span:nth-last-of-type(2) {
   background-color: rgb(103, 186, 86);
 }
+
+/* ////////////////////////////////////////////////////////////////////////////// */
+
+/* lists.html, 8th part */
+
+a:link {
+  background-color: gold;
+}
+
+a:visited {
+  background-color: maroon;
+}

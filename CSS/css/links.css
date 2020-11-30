@@ -16,3 +16,14 @@ input:valid {
   height: 10rem;
   overflow: scroll;
 }
+
+/* //////////////////////////////////////////////////// */
+
+/* links.html, 3rd part */
+
+img {
+  width: 20rem;
+  height: 15rem;
+  border: olivedrab dashed;
+  object-fit: fill;
+}

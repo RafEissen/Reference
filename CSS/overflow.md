@@ -4,6 +4,8 @@
 [overflow-x](#-overflow-x) <br>
 [overflow-y](#-overflow-y) <br>
 
+<hr>
+
 ## //////////////////////////////////////////////////////////// overflow
 
 Sets the desired behavior for an element's overflow - i.e. when an element's content is too big to fit in its block formatting context - in both directions.
@@ -40,6 +42,8 @@ Depends on the user agent (browser). If content fits inside the padding box, it 
 
 [To Top](#overflow)
 
+<hr>
+
 ## //////////////////////////////////////////////////////////// overflow-x
 
 Specifies whether to clip the content, add a scroll bar, or display overflow content of a block-level element, when it overflows at the <ins>left and right edges</ins>.
@@ -49,6 +53,8 @@ Specifies whether to clip the content, add a scroll bar, or display overflow con
 Same as in [overflow](#-overflow) <br>
 
 [To Top](#overflow)
+
+<hr>
 
 ## //////////////////////////////////////////////////////////// overflow-y
 

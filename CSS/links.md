@@ -1,4 +1,6 @@
-# Links (proceed with invalid)
+# Links\*
+
+(proceed with invalid)
 
 [:active](#-active) <br>
 [:first-pseudo-element](#-first) <br>

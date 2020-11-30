@@ -10,12 +10,9 @@ input:valid {
 
 /* links.html, 2nd part */
 
-/* #fname :invalid {
-  border: 2px solid red;
-  content: "✖";
+.over {
+  border: dotted;
+  width: 15rem;
+  height: 10rem;
+  overflow: scroll;
 }
-
-#fname :valid {
-  background-color: lightgreen;
-  content: "✓";
-} */

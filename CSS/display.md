@@ -7,6 +7,10 @@
 
 <hr>
 
+## //////////////////////////////////////////////////////////// display
+
+Sets whether an element is treated as a <ins>block or inline element</ins> and the layout used for its children, such as flow layout, grid or flex.
+
 ## //////////////////////////////////////////////////////////// object-fit
 
 Is used to specify how an `<img>` or `<video>` should be resized to fit its container.

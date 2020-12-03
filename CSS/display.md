@@ -16,11 +16,11 @@ The display property specifies if/how an element is displayed. It sets whether a
 
 <ins>**block**</ins>
 
-Displays an element as a block element (like `<p>`). it starts on a new line, and takes up the whole width.
+Displays an element as a block element (like `<p>`). It starts on a new line, and takes up the whole width.
 
 ![display-block](pics/display-block.png)
 
-## Example Files:
+### Example Files:
 
 [links.html, 7th part](html/links.html) <br>
 
@@ -52,7 +52,7 @@ Following example shows the outer `<div>` with a 2-pixel red border and a width 
 
 ![display-box-contents](pics/display-box-contents.png)
 
-## Example Files:
+### Example Files:
 
 [links.html, 5th part](html/links.html) <br>
 
@@ -66,6 +66,8 @@ The element generates a block element box that establishes a new block formattin
 
 [links.html, 5th part](html/links.html) <br>
 
+[links.html, 6th part](html/links.html) <br>
+
 <ins>**table**</ins>
 
 These elements behave like HTML `<table>` elements. It defines a block-level box.
@@ -78,7 +80,7 @@ The elements behaves like a block element and lays out its content according to 
 
 The elements behaves like a block element and lays out its content according to the grid model.
 
-## Example Files:
+### Example Files:
 
 [links.html, 6th part](html/links.html) <br>
 
@@ -134,13 +136,13 @@ Example is the same as the _content_ value.
 
 ## //////////////////////////////////////////////////////////// object-position
 
-Is used together with _object-fit_ to specify how an `<img>`or `<video>` should be positioned with x/y coordinates withing the element's box. Areas of the box which aren't covered by the replaced element's object will show the element's background.
+Is used together with _object-fit_ to specify how an `<img>`or `<video>` should be positioned with x/y coordinates within the element's box. Areas of the box which aren't covered by the replaced element's object will show the element's background.
 
 ## Property Values:
 
 <ins>**position**</ins>
 
-Specifies the position of the image or video inside its content box. First value controls the x-axis adn the second value controls the y-axis. Can be a string (left, center or right), or a number (in px or %). Negative values are allowed.
+Specifies the position of the image or video inside its content box. First value controls the x-axis and the second value controls the y-axis. Can be a string (left, center or right), or a number (in px or %). Negative values are allowed.
 
 Following example shows the positioning of the image with its right edge flush against the right edge of the element's box (100% on x-axis) and is located 10% of the way down the height of the element's box (y-axis).
 

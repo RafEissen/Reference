@@ -1,7 +1,5 @@
 # Links\*
 
-(proceed with invalid)
-
 [:active](#-active) <br>
 [:first-pseudo-element](#-first) <br>
 [:first-child](#-first-child) <br>

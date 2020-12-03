@@ -3,10 +3,6 @@
 proceed with inline block
 
 [display](#-display) <br>
-
-<!-- [display-box](#-display-box) <br>
-[display-inside](#-display-inside) <br> -->
-
 [object-fit](#-object-fit) <br>
 [object-position](#-object-position) <br>
 
@@ -24,6 +20,10 @@ Displays an element as a block element (like `<p>`). it starts on a new line, an
 
 ![display-block](pics/display-block.png)
 
+## Example Files:
+
+[links.html, 7th part](html/links.html) <br>
+
 <ins>**inline**</ins>
 
 Displays an element as an inline element (like `<span>`). Any height and width properties will have no effect.
@@ -31,6 +31,10 @@ Displays an element as an inline element (like `<span>`). Any height and width p
 Example is the same as in `block` only with `inline` value.
 
 ![display-inline](pics/display-inline.png)
+
+## Example Files:
+
+[links.html, 5th part](html/links.html) <br>
 
 <ins>**inline-block**</ins>
 
@@ -58,6 +62,10 @@ The element generates a block element box that establishes a new block formattin
 
 ![display-inside_flow-root](pics/display-inside_flow-root.png)
 
+## Example Files:
+
+[links.html, 5th part](html/links.html) <br>
+
 <ins>**table**</ins>
 
 These elements behave like HTML `<table>` elements. It defines a block-level box.
@@ -73,6 +81,8 @@ The elements behaves like a block element and lays out its content according to 
 ## Example Files:
 
 [links.html, 6th part](html/links.html) <br>
+
+For other property values visit [MDN web docs.](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
 
 [To Top](#overview)
 

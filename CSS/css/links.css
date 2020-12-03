@@ -49,7 +49,7 @@ input:valid {
 .outer {
   border: 3px solid red;
   width: 300px;
-  display: none;
+  display: flow-root;
 }
 
 .outer > div {
@@ -64,7 +64,7 @@ input:valid {
   background-color: rgb(224, 206, 247);
   border: 5px solid rebeccapurple;
   display: flow-root;
-  width: 35rem;
+  width: 30rem;
 }
 
 .float {
@@ -82,6 +82,5 @@ input:valid {
 
 span {
   display: inline;
-  border: solid;
-  /* width: 50rem; */
+  border: solid thin;
 }

@@ -1,6 +1,11 @@
 # Overview
 
-(proceed after fill)
+proceed with inline block
+
+[display](#-display) <br>
+
+<!-- [display-box](#-display-box) <br>
+[display-inside](#-display-inside) <br> -->
 
 [object-fit](#-object-fit) <br>
 [object-position](#-object-position) <br>
@@ -9,7 +14,69 @@
 
 ## //////////////////////////////////////////////////////////// display
 
-Sets whether an element is treated as a <ins>block or inline element</ins> and the layout used for its children, such as flow layout, grid or flex.
+The display property specifies if/how an element is displayed. It sets whether an element is treated as a <ins>block or inline element</ins> and the layout used for its children, such as flow layout, grid or flex.
+
+# Property Values:
+
+<ins>**block**</ins>
+
+Displays an element as a block element (like `<p>`). it starts on a new line, and takes up the whole width.
+
+![display-block](pics/display-block.png)
+
+<ins>**inline**</ins>
+
+Displays an element as an inline element (like `<span>`). Any height and width properties will have no effect.
+
+Example is the same as in `block` only with `inline` value.
+
+![display-inline](pics/display-inline.png)
+
+<ins>**inline-block**</ins>
+
+Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values.
+
+<ins>**none**</ins>
+
+The element is completely removed.
+
+<ins>**contents**</ins>
+
+Makes the container disappear, making the child elements children of the element the next level up in the DOM.
+
+Following example shows the outer `<div>` with a 2-pixel red border and a width of 300px. However it also has `display: contents` specified therefore this `<div>` will not be rendered, the border and width will no longer apply, and the child element will be displayed as if the parent had never existed.
+
+![display-box-contents](pics/display-box-contents.png)
+
+## Example Files:
+
+[links.html, 5th part](html/links.html) <br>
+
+<ins>**flow-root**</ins>
+
+The element generates a block element box that establishes a new block formatting context, defining where the formatting root lies.
+
+![display-inside_flow-root](pics/display-inside_flow-root.png)
+
+<ins>**table**</ins>
+
+These elements behave like HTML `<table>` elements. It defines a block-level box.
+
+<ins>**flex**</ins>
+
+The elements behaves like a block element and lays out its content according to the flexbox model.
+
+<ins>**grid**</ins>
+
+The elements behaves like a block element and lays out its content according to the grid model.
+
+## Example Files:
+
+[links.html, 6th part](html/links.html) <br>
+
+[To Top](#overview)
+
+<hr>
 
 ## //////////////////////////////////////////////////////////// object-fit
 

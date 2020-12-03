@@ -41,3 +41,47 @@ input:valid {
   object-fit: none;
   object-position: 100% 10%;
 }
+
+/* //////////////////////////////////////////////////// */
+
+/* links.html, 5th part */
+
+.outer {
+  border: 3px solid red;
+  width: 300px;
+  display: none;
+}
+
+.outer > div {
+  border: 1px solid green;
+}
+
+/* //////////////////////////////////////////////////// */
+
+/* links.html, 6th part */
+
+.box {
+  background-color: rgb(224, 206, 247);
+  border: 5px solid rebeccapurple;
+  display: flow-root;
+  width: 35rem;
+}
+
+.float {
+  float: left;
+  width: 200px;
+  height: 150px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+/* //////////////////////////////////////////////////// */
+
+/* links.html, 7th part */
+
+span {
+  display: inline;
+  border: solid;
+  /* width: 50rem; */
+}

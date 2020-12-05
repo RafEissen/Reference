@@ -1,6 +1,6 @@
 # Overview
 
-[](#)
+[Box Model](#-box-model)
 
 # Layouts
 
@@ -32,7 +32,7 @@ Block elements assume all of the available space in one dimension. Typically, th
 If a box is defined as a block, it will behave in the following ways:
 
 - The box will break onto a new line.
-- The box will extend in the inline direction to fill hte space available in its container. In most cases this means that the box will become as wide as its container, filling up 100% of hte space available.
+- The box will extend in the inline direction to fill the space available in its container. In most cases this means that the box will become as wide as its container, filling up 100% of the space available.
 - The _width_ and _height_ properties are respected.
 - Padding, margin and border will cause other elements to be pushed away from the box
 
@@ -62,7 +62,7 @@ Without intervention, it is the contents of an element that determines its size 
 
 ## The `box-sizing` property
 
-By default, the dimensions of a box are the dimensions of hte box's content _plus_ its padding and border values (implicitly: `box-sizing`: `content-box`). That is, if you set an element to be 10rem wide, then add padding on both sides of 1rem, it will be 12rem wide:
+By default, the dimensions of a box are the dimensions of the box's content _plus_ its padding and border values (implicitly: `box-sizing`: `content-box`). That is, if you set an element to be 10rem wide, then add padding on both sides of 1rem, it will be 12rem wide:
 
 ```
 10rem + 1rem of left padding + 1rem of right padding
@@ -80,7 +80,10 @@ Any styles, like `box-sizing: border-box`, that are applicable to all elements a
 }
 ```
 
+**Alt:** To ensure the parent element retains a height of `100vh`, despite the additional padding, a `box-sizing: border-box` value must be applied. Where it is not, the padding is _added_ to the total height.
+
 Only where the height or width of a box is constrained does the difference between `content-box`and `border-box` come into play.
+
 For illustration, consider a block element placed inside another block element. Using the `content-box` model and a padding of `1rem`, the child elemet will overflow by `2rem` when `width: 100%` is applied.
 
 ![content-box-ex](pics/conten-box-ex.png)
@@ -90,3 +93,5 @@ Why? Because `width: 100%` means _"make the width of this element the same as th
 But if we use `width: auto` (we can just remove `width: 100%`, since `auto` is the default value) the child within the parent box perfectly. And that's _regardless_ of the `box-sizing` value.
 
 ![width_auto](pics/width_auto.png)
+
+Implicitly, the `height` is also set to `auto`, meaning it is derived from the content. Again, `box-sizing` has no effect.

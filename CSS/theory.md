@@ -95,3 +95,9 @@ But if we use `width: auto` (we can just remove `width: 100%`, since `auto` is t
 ![width_auto](pics/width_auto.png)
 
 Implicitly, the `height` is also set to `auto`, meaning it is derived from the content. Again, `box-sizing` has no effect.
+
+## What if these values are undeclared?
+
+If padding or borders are undeclared, they are either zero (likely if you are using a [css reset](https://css-tricks.com/poll-results-what-css-reset-do-you-use/)) or the browser default value (probably **not** zero especially on form elements that are commonly not reset). More on that read below in [CSS Reset section](#-CSS-Reset)
+
+[To Top](#overview)

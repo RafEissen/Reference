@@ -17,6 +17,9 @@ li {
   background-color: lightblue;
 }
 
+.nasa :last-child {
+  background-color: cyan;
+}
 /* ////////////////////////////////////////////////////////////////////////////// */
 
 /* lists.html, 2nd part */

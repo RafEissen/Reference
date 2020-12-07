@@ -8,6 +8,8 @@
 [:first-of-type](#-first-of-type) <br>
 [:focus](#-focus) <br>
 [:hover](#-hover) <br>
+[:invalid](#-invalid) <br>
+[:last-child](#-last-child) <br>
 [:link](#-link) <br>
 [:not](#-not) <br>
 [:nth-child](#-nth-child) <br>
@@ -172,6 +174,38 @@ Matches when the user interacts with an element with a pointing device (such as 
 <hr>
 
 ## //////////////////////////////////////////////////////////// :invalid
+
+The `:invalid` selector allows you to select `<input>` elements that do not contain valid content, as determined by its `type` attribute.
+
+Following example shows a form that colors elements green when they validate and red when they don't.
+
+![invalid-pseudo-element](pics/invalid.png)
+
+Note how the first `<input>` ("Email") is green - valid - even when there is no content in the field. This is because the input is optional, so leaving it blank would result in a valid submission. To fix this behaviour, the second `<input>` has a "required" attribute, which means that a blank field would result in an invalid form submission.
+
+## Example Files:
+
+[pseudo.html 1st part](html/pseudo.html) <br>
+
+[To Top](#links)
+
+<hr>
+
+## //////////////////////////////////////////////////////////// :last-child
+
+Represents the last element among a group of sibling elements.
+
+Using `:last-child` is very similar to `:last-of-type` but with one **critical difference:** it is <ins>less specific</ins>. `:last-child` will only try to match the very last child of a parent element, while `last-of-type` will match the last occurrence of a specified element, even if it doesn't come dead last in the HTML.
+
+![last-child](pics/last-child.png)
+
+## Example Files:
+
+[lists.html 1st part](html/lists.html) <br>
+
+[To Top](#links)
+
+<hr>
 
 ## //////////////////////////////////////////////////////////// :link
 

@@ -1,7 +1,9 @@
 # Links\*
 
+(continue after :checked element with B and A and then from I )
+
 [:active](#-active) <br>
-[:first-pseudo-element](#-first) <br>
+[:first](#-first) <br>
 [:first-child](#-first-child) <br>
 [::first-letter](#-first-letter) <br>
 [::first-line](#-first-line) <br>
@@ -46,6 +48,40 @@ Here's the button being clicked: <br>
 ## Example Files:
 
 [lists.html 2nd part](html/lists.html) <br>
+
+[To Top](#links)
+
+<hr>
+
+## //////////////////////////////////////////////////////////// :checked
+
+Selects elements when they are in the selected state. It is only associated with `<input>` elements of type radio and checkbox. The `:checked` pseudo-class selector matches radio and checkbox input types when checked or toggled to an `on` state.
+
+## Example:
+
+![checked](pics/checked.png)
+
+## Example Files:
+
+[pseudo.html 3rd part](html/pseudo.html)
+
+[To Top](#links)
+
+<hr>
+
+## //////////////////////////////////////////////////////////// :empty
+
+The `:empty` pseudo selector will select elements that contain either nothing or only an HTML comment.
+
+![empty](pics/empty.png)
+
+It's useful for hiding empty elements that might cause weird spacing (e.g. they have padding). Or something like removing the border from the top-left table cell element in a cross-referencing table.
+
+## Example:
+
+![empty example](pics/empty-example.png)
+
+**No example files.**
 
 [To Top](#links)
 

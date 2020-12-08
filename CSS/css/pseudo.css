@@ -53,13 +53,17 @@ input:required:invalid {
   width: 6rem;
 }
 
-progress {
-  margin: 4px;
-  /* color: black; */
+/* ////////////////////////////////////////////////////////////////////////////// */
+
+/* pseudo.html, 3rd part */
+
+input[type="checkbox"] + label {
+  color: #ccc;
+  font-style: italic;
 }
 
-progress:indeterminate {
-  opacity: 0.8;
-  /* background-color: lightgray; */
-  box-shadow: 0 0 2px 1px red;
+input[type="checkbox"]:checked + label {
+  color: #f00;
+  font-style: normal;
+  font-weight: bolder;
 }

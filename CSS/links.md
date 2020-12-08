@@ -8,6 +8,7 @@
 [:first-of-type](#-first-of-type) <br>
 [:focus](#-focus) <br>
 [:hover](#-hover) <br>
+[:in-range](#-in-range) <br>
 [:invalid](#-invalid) <br>
 [:last-child](#-last-child) <br>
 [:link](#-link) <br>
@@ -16,6 +17,7 @@
 [:nth-last-child](#-nth-last-child) <br>
 [:nth-last-of-type](#-nth-last-of-type) <br>
 [:nth-of-type](#-nth-of-type) <br>
+[:out-of-range](#-in-range) <br>
 [:valid](#-valid) <br>
 [:visited](#-visited) <br>
 
@@ -172,6 +174,42 @@ Matches when the user interacts with an element with a pointing device (such as 
 [To Top](#links)
 
 <hr>
+
+## //////////////////////////////////////////////////////////// :in-range
+
+Represents an `<input>` element whose current value is within the range limits specified by the `min` and `max` attributes.
+
+**Tip:** Use the <ins>`:out-of-range`</ins> selector to select all elements with a value that is outside a specified range.
+
+**NOTE:** An empty `<input>` does not count as out of range, and will not be selected using the `:out-of-range` pseudo-class selector. You could also use the `required` attribute and the `:invalid` pseudo-class to provide more general logic and styling for making inputs mandatory (`:invalid` will style bland _and_ out-of-range inputs).
+
+In example below, the input will have a green border when its value is between 5 and 10. Also the border's width gets <ins>longer</ins> if the value is in range and <ins>shorter</ins> if it is out of range.
+
+![in-out-of-range](pics/in-out-of-range.png)
+
+## Example Files:
+
+[pseudo.html 2nd part](html/pseudo.html) <br>
+
+[To Top](#links)
+
+<hr>
+
+## //////////////////////////////////////////////////////////// :indeterminate
+
+Selects form elements that are in an intermediate state that is neither checked nor unchecked. It's that in-between state that we might consider the "Maybe" between "Yes" and "No" options. The state is not fully determined, hence the name: indeterminate.
+
+Elements targeted by this selector are:
+
+- `<input type="checkbox">` elements whose `indeterminate` property is set to `true` by JavaScript
+- `<input type="radio">` elements, when all radio buttons with the same `name` value in the form are unchecked
+- `<progress>` elements in an indeterminate state
+
+Here we can see the indeterminate state implemented for a third checkbox:
+
+![indeterminate](pics/indeterminate.png)
+
+There are no example files for the discussed pseudo-element because the implementation requires the knowledge of JavaScript.
 
 ## //////////////////////////////////////////////////////////// :invalid
 

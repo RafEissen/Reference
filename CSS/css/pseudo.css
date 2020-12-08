@@ -37,3 +37,29 @@ input:required {
 input:required:invalid {
   border-color: #c00000;
 }
+
+/* ////////////////////////////////////////////////////////////////////////////// */
+
+/* pseudo.html, 2nd part */
+
+.range:in-range {
+  border: 4px solid green;
+  background-color: lightgreen;
+  width: 10rem;
+}
+
+.range:out-of-range {
+  border: 5px solid darkred;
+  width: 6rem;
+}
+
+progress {
+  margin: 4px;
+  /* color: black; */
+}
+
+progress:indeterminate {
+  opacity: 0.8;
+  /* background-color: lightgray; */
+  box-shadow: 0 0 2px 1px red;
+}

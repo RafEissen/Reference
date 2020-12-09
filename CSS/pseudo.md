@@ -63,7 +63,7 @@ Applies styles to the first letter of the first line of a block-level element, b
 
 ## Example Files:
 
-[lists.html 1st part](/html/lists.html) <br>
+[lists.html 1st part](html/lists.html) <br>
 
 [To Top](#pseudo-elements---classes)
 
@@ -81,7 +81,7 @@ Applies to the first line of a block-level element.
 
 ## Example Files:
 
-[lists.html 4th part](/html/lists.html) <br>
+[lists.html 4th part](html/lists.html) <br>
 
 [To Top](#pseudo-elements---classes)
 
@@ -227,7 +227,7 @@ Represents the first element among a group of sibling elements.
 
 ## Example Files
 
-[lists.html 3rd part](/html/lists.html) <br>
+[lists.html 3rd part](html/lists.html) <br>
 
 [To Top](#pseudo-elements---classes)
 

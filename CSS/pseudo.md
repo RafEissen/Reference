@@ -1,12 +1,20 @@
-# Links\*
+# Pseudo-Elements & -Classes
 
-(continue after :checked element with B and A and then from I )
+# Pseudo-Elements
 
-[:active](#-active) <br>
-[:first](#-first) <br>
-[:first-child](#-first-child) <br>
+Are used to style specified parts of an element.
+
+[::after & ::before](#-after---before) <br>
 [::first-letter](#-first-letter) <br>
 [::first-line](#-first-line) <br>
+[::selection](#-first-line) <br>
+
+# Pseudo-Classes
+
+[:active](#-active) <br>
+[:any-link](#-any-link) <br>
+[:first](#-first) <br>
+[:first-child](#-first-child) <br>
 [:first-of-type](#-first-of-type) <br>
 [:focus](#-focus) <br>
 [:hover](#-hover) <br>
@@ -24,6 +32,88 @@
 [:visited](#-visited) <br>
 
 <hr>
+
+## //////////////////////////////////////////////////////////// ::after & :: before
+
+The `::after` selector inserts something after the content of each selected element(s).
+
+Use the <ins>content</ins> property to specify the content to insert.
+
+Use the <ins>`::before`</ins> selector to insert something before the content.
+
+## Example:
+
+![before & after example](pics/before_after.png)
+
+## Example Files:
+
+[pseudo.html 4th part](html/pseudo.html) <br>
+
+[To Top](#pseudo-elements---classes)
+
+<hr>
+
+## //////////////////////////////////////////////////////////// ::first-letter
+
+Applies styles to the first letter of the first line of a block-level element, but only when not preceded by other content (such as images or inline tables).
+
+## Example:
+
+![::first-letter](pics/first-letter.png)
+
+## Example Files:
+
+[lists.html 1st part](/html/lists.html) <br>
+
+[To Top](#pseudo-elements---classes)
+
+<hr>
+
+## //////////////////////////////////////////////////////////// ::first-line
+
+Applies to the first line of a block-level element.
+
+**Note:** The length of first line depends on many factors, including the width of the element, the width of the document, and the font size of the text.
+
+## Example:
+
+![::first-line](pics/first-line.png)
+
+## Example Files:
+
+[lists.html 4th part](/html/lists.html) <br>
+
+[To Top](#pseudo-elements---classes)
+
+<hr>
+
+## //////////////////////////////////////////////////////////// ::selection
+
+Applies styles to the part of a document that has been highlighted by the user (such as clicking and dragging the mouse across text).
+
+Only certain CSS properties can be used with `::selection`:
+
+- color
+- background-color
+- cursor
+- caret-color
+- outline
+- text-decoration
+- text-shadow
+
+## Example:
+
+![temporary](pics/temporary.png)
+
+## Example Files:
+
+[pseudo.html 4th part](html/pseudo.html)
+
+[To Top](#pseudo-elements---classes)
+
+<hr>
+
+# Pseudo-Classes
 
 ## //////////////////////////////////////////////////////////// :active
 
@@ -49,7 +139,23 @@ Here's the button being clicked: <br>
 
 [lists.html 2nd part](html/lists.html) <br>
 
-[To Top](#links)
+[To Top](#pseudo-elements---classes)
+
+<hr>
+
+## //////////////////////////////////////////////////////////// :any-link
+
+Represents an element that acts as the source anchor of a hyperlink, independent of whether it has been visited. In other words, it matches every `<a>`, `<area>`, or `<link>` element that <ins>has an `href` attribute</ins>. Thus, it matches all elements that match `:link` or `:visited`.
+
+## Example:
+
+![any-link](pics/any-link.png)
+
+## Example Files:
+
+[pseudo.html 5th part](html/pseudo.html)
+
+[To Top](#pseudo-elements---classes)
 
 <hr>
 
@@ -65,7 +171,7 @@ Selects elements when they are in the selected state. It is only associated with
 
 [pseudo.html 3rd part](html/pseudo.html)
 
-[To Top](#links)
+[To Top](#pseudo-elements---classes)
 
 <hr>
 
@@ -83,7 +189,7 @@ It's useful for hiding empty elements that might cause weird spacing (e.g. they 
 
 **No example files.**
 
-[To Top](#links)
+[To Top](#pseudo-elements---classes)
 
 <hr>
 
@@ -107,7 +213,7 @@ Press the "Print!" button to print the example. The words on the first page shou
 
 [rgd.html 4th part](html/rgd.html) <br>
 
-[To Top](#links)
+[To Top](#pseudo-elements---classes)
 
 <hr>
 
@@ -123,41 +229,7 @@ Represents the first element among a group of sibling elements.
 
 [lists.html 3rd part](/html/lists.html) <br>
 
-[To Top](#links)
-
-<hr>
-
-## //////////////////////////////////////////////////////////// ::first-letter
-
-Applies styles to the first letter of the first line of a block-level element, but only when not preceded by other content (such as images or inline tables).
-
-## Example:
-
-![::first-letter](pics/first-letter.png)
-
-## Example Files:
-
-[lists.html 1st part](/html/lists.html) <br>
-
-[To Top](#links)
-
-<hr>
-
-## //////////////////////////////////////////////////////////// ::first-line
-
-Applies to the first line of a block-level element.
-
-**Note:** The length of first line depends on many factors, including the width of the element, the width of the document, and the font size of the text.
-
-## Example:
-
-![::first-line](pics/first-line.png)
-
-## Example Files:
-
-[lists.html 4th part](/html/lists.html) <br>
-
-[To Top](#links)
+[To Top](#pseudo-elements---classes)
 
 <hr>
 
@@ -173,7 +245,7 @@ Represents the first element of its type among a group of sibling elements.
 
 [lists.html 5th part](html/lists.html) <br>
 
-[To Top](#links)
+[To Top](#pseudo-elements---classes)
 
 <hr>
 
@@ -189,7 +261,7 @@ Represents an element (such as a form input) that has received focus. It is gene
 
 [rgd.html 4th part](html/rgd.html) <br>
 
-[To Top](#links)
+[To Top](#pseudo-elements---classes)
 
 <hr>
 
@@ -207,7 +279,7 @@ Matches when the user interacts with an element with a pointing device (such as 
 
 [rgd.html 4th part](html/rgd.html) <br>
 
-[To Top](#links)
+[To Top](#pseudo-elements---classes)
 
 <hr>
 
@@ -227,7 +299,7 @@ In example below, the input will have a green border when its value is between 5
 
 [pseudo.html 2nd part](html/pseudo.html) <br>
 
-[To Top](#links)
+[To Top](#pseudo-elements---classes)
 
 <hr>
 
@@ -261,7 +333,7 @@ Note how the first `<input>` ("Email") is green - valid - even when there is no 
 
 [pseudo.html 1st part](html/pseudo.html) <br>
 
-[To Top](#links)
+[To Top](#pseudo-elements---classes)
 
 <hr>
 
@@ -277,7 +349,7 @@ Using `:last-child` is very similar to `:last-of-type` but with one **critical d
 
 [lists.html 1st part](html/lists.html) <br>
 
-[To Top](#links)
+[To Top](#pseudo-elements---classes)
 
 <hr>
 
@@ -295,7 +367,7 @@ Represents an element that has not yet been visited. It matches every unvisited 
 
 [lists.html 8th part](html/lists.html) <br>
 
-[To Top](#links)
+[To Top](#pseudo-elements---classes)
 
 <hr>
 
@@ -317,7 +389,7 @@ This example shows the exclusion of all the html elements except for the last cl
 
 [text.html 5th part](html/text.html) <br>
 
-[To Top](#links)
+[To Top](#pseudo-elements---classes)
 
 <hr>
 
@@ -357,7 +429,7 @@ It can be read as the *An+B*th element of a list.
 
 [lists.html 6th part](html/lists.html) <br>
 
-[To Top](#links)
+[To Top](#pseudo-elements---classes)
 
 <hr>
 
@@ -371,7 +443,7 @@ Matches elements based on their position among a group of siblings, counting fro
 
 [lists.html 6th part](html/lists.html) <br>
 
-[To Top](#links)
+[To Top](#pseudo-elements---classes)
 
 <hr>
 
@@ -389,7 +461,7 @@ Matches elements of a given type, based on their position among a group of sibli
 
 [lists.html 7th part](html/lists.html) <br>
 
-[To Top](#links)
+[To Top](#pseudo-elements---classes)
 
 <hr>
 
@@ -406,7 +478,7 @@ Matches elements of a given type (tag name), based on their position among a gro
 
 none <br>
 
-[To Top](#links)
+[To Top](#pseudo-elements---classes)
 
 ## //////////////////////////////////////////////////////////// :valid
 
@@ -420,7 +492,7 @@ Following example shows that by trying to type in an illegal e-mail address the 
 
 [links.html 1st part](html/links.html) <br>
 
-[To Top](#links)
+[To Top](#pseudo-elements---classes)
 
 ## //////////////////////////////////////////////////////////// :visited
 
@@ -428,6 +500,6 @@ Represents links that the user has already visited. For privacy reasons, the sty
 
 For more information on restriction for `:visited` pseudo-element, visit the official [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/:visited).
 
-[To Top](#links)
+[To Top](#pseudo-elements---classes)
 
 <hr>

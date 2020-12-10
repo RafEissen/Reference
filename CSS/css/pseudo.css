@@ -106,3 +106,17 @@ a:any-link:not([href$=".com"]) {
   border: 3px solid red;
   color: orange;
 } */
+
+/* ////////////////////////////////////////////////////////////////////////////// */
+
+/* pseudo.html, 6th part */
+
+.opt_vs_req input:optional {
+  border-color: rebeccapurple;
+  border-width: 5px;
+}
+
+.opt_vs_req input:required {
+  border-color: palevioletred;
+  border-width: 5px;
+}

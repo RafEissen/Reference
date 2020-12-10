@@ -2,8 +2,6 @@
 
 # Pseudo-Elements
 
-Are used to style specified parts of an element.
-
 [::after & ::before](#-after---before) <br>
 [::first-letter](#-first-letter) <br>
 [::first-line](#-first-line) <br>
@@ -13,6 +11,9 @@ Are used to style specified parts of an element.
 
 [:active](#-active) <br>
 [:any-link](#-any-link) <br>
+[:checked](#-checked) <br>
+[:empty](#-empty) <br>
+[:enabled](#-enabled) <br>
 [:first](#-first) <br>
 [:first-child](#-first-child) <br>
 [:first-of-type](#-first-of-type) <br>
@@ -27,11 +28,16 @@ Are used to style specified parts of an element.
 [:nth-last-child](#-nth-last-child) <br>
 [:nth-last-of-type](#-nth-last-of-type) <br>
 [:nth-of-type](#-nth-of-type) <br>
+[:only-of-type](#-only-of-type) <br>
+[:optional](#-optional) <br>
 [:out-of-range](#-in-range) <br>
+[:required](#-optional) <br>
 [:valid](#-valid) <br>
 [:visited](#-visited) <br>
 
 <hr>
+
+Pseudo elements are used to style specified parts of an element.
 
 ## //////////////////////////////////////////////////////////// ::after & :: before
 
@@ -169,8 +175,6 @@ Selects elements when they are in the selected state. It is only associated with
 
 ## Example Files:
 
-[pseudo.html 3rd part](html/pseudo.html)
-
 [To Top](#pseudo-elements---classes)
 
 <hr>
@@ -188,6 +192,22 @@ It's useful for hiding empty elements that might cause weird spacing (e.g. they 
 ![empty example](pics/empty-example.png)
 
 **No example files.**
+
+[To Top](#pseudo-elements---classes)
+
+<hr>
+
+## //////////////////////////////////////////////////////////// :enabled
+
+Represents any enabled element. An element is enabled if it can be activated (selected, clicked on, typed into, etc.) or accept focus, otherwise it is disabled. It is only associated with form elements (`<input>`, `<select>`, `<textarea>`).
+
+## Example:
+
+![enabled_disabled](pics/enabled_disabled.png)
+
+## Example Files:
+
+[lists.html 9th part](html/lists.html)
 
 [To Top](#pseudo-elements---classes)
 
@@ -474,9 +494,37 @@ Matches elements of a given type (tag name), based on their position among a gro
 ![nth-of-typeI.png](pics/nth-of-typeI.png) <br>
 ![nth-of-typeII.png](pics/nth-of-typeII.png) <br>
 
+## There are no example files:
+
+[To Top](#pseudo-elements---classes)
+
+## //////////////////////////////////////////////////////////// :only-of-type
+
+Represents an element that has no siblings of the same type.
+
+## Example:
+
+![only-of-type](pics/only-of-type.png)
+
 ## Example Files:
 
-none <br>
+[lists.html, 7th part](html/lists.html) <br>
+
+[To Top](#pseudo-elements---classes)
+
+## //////////////////////////////////////////////////////////// :optional
+
+Represents any `<input>`, `<select>`, or `<textarea>` element that does not have the `required` attribute set on it.
+
+**Note:** The `:required` pseudo-class selects _required_ form fields.
+
+## Example:
+
+![optional_required](pics/optional_required.png)
+
+## Example Files:
+
+[pseudo.html 6th part](html/pseudo.html) <br>
 
 [To Top](#pseudo-elements---classes)
 

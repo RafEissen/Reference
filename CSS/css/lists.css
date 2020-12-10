@@ -57,7 +57,6 @@ form button {
 article :first-of-type {
   background-color: pink;
 }
-
 /* ////////////////////////////////////////////////////////////////////////////// */
 
 /* lists.html, 6th part */
@@ -83,6 +82,11 @@ article :first-of-type {
   background-color: rgb(103, 186, 86);
 }
 
+/* Example demo for ":only-child" pseudo class */
+.lot :only-of-type {
+  color: red;
+  font-weight: 700;
+}
 /* ////////////////////////////////////////////////////////////////////////////// */
 
 /* lists.html, 8th part */
@@ -93,4 +97,18 @@ a:link {
 
 a:visited {
   background-color: maroon;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////// */
+
+/* lists.html, 9th part */
+
+input:enabled {
+  color: rgba(25, 77, 25, 1);
+  background-color: rgba(191, 214, 106, 0.7);
+}
+
+input:disabled {
+  color: #0f0303b9;
+  background-color: rgba(243, 147, 235, 0.664);
 }

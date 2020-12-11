@@ -31,7 +31,10 @@
 [:only-of-type](#-only-of-type) <br>
 [:optional](#-optional) <br>
 [:out-of-range](#-in-range) <br>
+[:read & write](#-read-only) <br>
 [:required](#-optional) <br>
+[:root](#-root) <br>
+[:target](#-target) <br>
 [:valid](#-valid) <br>
 [:visited](#-visited) <br>
 
@@ -339,6 +342,8 @@ Here we can see the indeterminate state implemented for a third checkbox:
 
 There are no example files for the discussed pseudo-element because the implementation requires the knowledge of JavaScript.
 
+<hr>
+
 ## //////////////////////////////////////////////////////////// :invalid
 
 The `:invalid` selector allows you to select `<input>` elements that do not contain valid content, as determined by its `type` attribute.
@@ -512,6 +517,8 @@ Represents an element that has no siblings of the same type.
 
 [To Top](#pseudo-elements---classes)
 
+<hr>
+
 ## //////////////////////////////////////////////////////////// :optional
 
 Represents any `<input>`, `<select>`, or `<textarea>` element that does not have the `required` attribute set on it.
@@ -524,9 +531,50 @@ Represents any `<input>`, `<select>`, or `<textarea>` element that does not have
 
 ## Example Files:
 
-[pseudo.html 6th part](html/pseudo.html) <br>
+[pseudo.html, 6th part](html/pseudo.html) <br>
 
 [To Top](#pseudo-elements---classes)
+
+<hr>
+
+## //////////////////////////////////////////////////////////// :read-only
+
+Represents an element (such as `input` or `textarea`) that is not editable by the user.
+
+Together with `:read-write` selector they represent two mutability pseudo-classes aiming at making form styling easier based on `disabled`, `readonly` and `contenteditable` HTML Attributes.
+
+## Example:
+
+![read-write](pics/read-write.png)
+
+## Example Files:
+
+[pseudo.html, 7th part](html/pseudo.html) <br>
+
+[To Top](#pseudo-elements---classes)
+
+<hr>
+
+## //////////////////////////////////////////////////////////// :root
+
+Matches the root element of a tree representing the document. In HTML, `:root` represents the `<html>` element and is identical to the selector `html`, except that its specificity is higher.
+
+## //////////////////////////////////////////////////////////// :target
+
+Represents a unique element (the _target element_) with an `id` matching the URL's fragment.
+
+## Example:
+
+![target example](pics/target.png) <br>
+![target example](pics/targetII.png)
+
+## Example Files:
+
+[target.html, 1st part](html/target.html) <br>
+
+[To Top](#pseudo-elements---classes) <br>
+
+<hr>
 
 ## //////////////////////////////////////////////////////////// :valid
 
@@ -538,9 +586,11 @@ Following example shows that by trying to type in an illegal e-mail address the 
 
 ## Example Files:
 
-[links.html 1st part](html/links.html) <br>
+[links.html, 1st part](html/links.html) <br>
 
 [To Top](#pseudo-elements---classes)
+
+<hr>
 
 ## //////////////////////////////////////////////////////////// :visited
 

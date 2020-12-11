@@ -112,3 +112,22 @@ input:disabled {
   color: #0f0303b9;
   background-color: rgba(243, 147, 235, 0.664);
 }
+
+/* ////////////////////////////////////////////////////////////////////////////// */
+
+/* lists.html, 10th part */
+
+.targetable p:target {
+  background-color: gold;
+}
+
+.targetable p:target::before {
+  font: 70% sans-serif;
+  content: "►";
+  color: limegreen;
+  margin-right: 0.25em;
+}
+
+.targetable p:target i {
+  color: red;
+}

@@ -366,9 +366,11 @@ Resize the background image to cover the entire container, even if it has to str
 
 ![size-cover](pics/size-cover.png)
 
-contain:
+<ins>**contain:**</ins>
 
 Resize the background image to make sure the image is fully visible.
+
+![size-contain](pics/size-contain.png)
 
 ## Example Files:
 

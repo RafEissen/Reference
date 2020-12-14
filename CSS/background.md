@@ -1,6 +1,5 @@
 # Background
 
-(proceed with background-clip)
 [background-attachment](#-background-attachment) <br>
 [background-blend-mode](#-background-blend-mode) <br>
 [background-clip](#-background-clip) <br>
@@ -74,8 +73,6 @@ Notice that the text color has not been affected by the additional property.
 
 The _background-image_ and _background-color_ are multiplied and typically this leads to a darker image than before.
 
-## Example:
-
 ![Build_It-multiply.png](pics/Build_It-multiply.png)
 
 <ins>**screen**</ins>
@@ -88,23 +85,17 @@ Both image and color is inverted, multiplied and then inverted again.
     •	green -> magenta
     •	blue -> yellow
 
-## Example:
-
 ![Build_It-screen.png](pics/Build_It-screen.png)
 
 <ins>**overlay**</ins>
 
 The _background-color_ is mixed with the _background-image_ to reflect the lightness or darkness of the backdrop.
 
-## Example:
-
 ![Build_It-overlay.png](pics/Build_It-overlay.png)
 
 <ins>**darken**</ins>
 
 If the _background-image_ is darker than the _background-color_ then the image is replaced, otherwise it is left as it was.
-
-## Example:
 
 ![Build_It-darken.png](pics/Build_It-darken.png)
 
@@ -134,136 +125,216 @@ Look up the rest of property values [here](https://css-tricks.com/almanac/proper
 
 Defines how far the background (color or image) should extend within an element.
 
-Example: txtborder.html, 2nd part; brdcolor.css, 2nd part
+## Property Values:
 
-Property Values:
+<ins>**border-box:**</ins>
 
-border-box: Default value. The background extends behind the border.
+Default value. The background extends behind the border.
 
-padding-box: Displays the background only up to, and not behind, the border.
+![background-border-box](pics/background-border-box.png)
 
-content-box: The background stops at the element’s padding.
+<ins>**padding-box:**</ins>
 
-////////////////////////////// <background-color>
+Displays the background only up to, and not behind, the border.
+
+![background-padding-box](pics/background-padding-box.png)
+
+<ins>**content-box:**</ins>
+
+The background stops at the element’s padding.
+
+![background-content-box](pics/background-content-box.png)
+
+## Example Files:
+
+[txtborder.html, 2nd part](html/txtborder.html)
+
+[To Top](#background)
+
+<hr>
+
+## //////////////////////////////////////////////////////////// background-color
 
 Sets the background color of an element. The background of an element, including padding and border (but not the margin).
 
-Tip: Use a background color and a text color that makes the text easy to read.
-
-Example: txtborder.html, 1st part; brdcolor.css, 1st part
+**Tip:** Use a background color and a text color that makes the text easy to read.
 
 In example above the RGB (Red, Green, Blue) color model is used. Each parameter (red, green, and blue) defines the intensity of the color as an integer between 0 and 255.  
 For example, rgb(0, 0, 255) is rendered as blue, because the blue parameter is set to its highest value (255) and the others are set to 0.
 
 There is also another color model called RGBA (Red, Green, Blue, Alpha). The value of the alpha argument is the same as the value provided for opacity: a decimal fraction from 0.0 to 1.0, which is once again a measure between full transparency (0.0) and full opacity (1.0).
 
-Property Values:
+## Property Values:
 
-color: Specifies the background-color.
+<ins>**color:**</ins>
 
-transparent: Specifies that the background color should be transparent. This is default.
+Specifies the background-color.
 
-initial & inherit
+<ins>**transparent:**</ins>
 
-////////////////////////////// <background-image>
+Specifies that the background color should be transparent. This is default.
+
+## Example Files:
+
+[txtborder.html, 1st part;](html/txtborder.html)
+
+[To Top](#background)
+
+<hr>
+
+## //////////////////////////////////////////////////////////// background-image
 
 Sets one or more background images for an element. By default, a background-image is placed at the top-left corner of an element, and repeated both vertically and horizontally.
 
-Property Values:
+## Property Values:
 
-url(‘URL’):
+<ins>**url(‘URL’):**</ins>
 
 The URL to the image. To specify more than one image, separate the URLs with a comma.
 
-none:
+![background-image](pics/background-image.png)
+
+<ins>**none:**</ins>
 
 No background image will be displayed. This is default.
 
-initial & inherit
+[txtborder.html, 6th part](html/txtborder.html)
 
-////////////////////////////// <background-origin>
+[To Top](#background)
+
+<hr>
+
+## //////////////////////////////////////////////////////////// background-origin
 
 Specifies the origin position (the background positioning area) of a background image. The property accepts the same keywords as you’ve seen in background-clip.
 
-Example: bgd.html, 4th part; bgd.css, 4th part
+## Property Values:
 
-Property Values:
+<ins>**border-box:**</ins>
 
-border-box: The background image starts from the upper left corner of the border
+The background image starts from the upper left corner of the border
 
-content-box: The background image starts from the upper left corner of the content.
+![background-origin-border](pics/background-origin-border.png)
 
-padding-box:
+<ins>**content-box:**</ins>
+
+The background image starts from the upper left corner of the content.
+
+![background-origin-content](pics/background-origin-content.png)
+
+<ins>**padding-box:**</ins>
 
 Default value. The background image starts from the upper left corner of the padding edge.
 
-////////////////////////////// <background-position>
+![background-origin-padding](pics/background-origin-padding.png)
+
+## Example Files:
+
+[lgd.html, 4th part](html/lgd.html)
+
+[To Top](#background)
+
+<hr>
+
+## //////////////////////////////////////////////////////////// background-position
 
 Sets the starting position of a background image.
 
-Tip: By default, a background-image is placed at the top-left corner of an element, and repeated both vertically and horizontally.
+**Tip:** By default, a background-image is placed at the top-left corner of an element, and repeated both vertically and horizontally.
 
-Example: txtborder.html, 6th part; brdcolor.css, 6th part
+## Property Values:
 
-Property Values:
+<ins>**(left) top, center, bottom:**</ins>
 
-(left) top, center, bottom:
+Following example positions the background-image at top-left corner.
 
-Example: left top
+![position-left-top](pics/position-left-top.png)
 
-(right) top, center, bottom:
+Following example centers the background-image on the right side.
 
-Example: right center
+![position-center-right](pics/position-center-right.png)
 
 (center) top, center, bottom:
 
-If you only specify one keyword, the other value will be “center”.
+This examples centers the image at the bottom.
 
-Example: center bottom
+![position-center-bottom](pics/position-center-bottom.png)
 
-x% y%
+<ins>**x% y%**</ins>
 
-The first value is the horizontal position and the second value is the vertical. The top left corner is 0% 0%. The right bottom corner is 100% 100%. If you only specify one value, the other value will be 50%. Default value is 0% 0%.
+The first value is the horizontal position and the second value is the vertical. The top left corner is 0% 0%. The right bottom corner is 100% 100%. If you only specify one value, the other value will be 50%.
 
-Example: Here is a picture’s position at 0% (horizontal) & 50% (vertical)
+Default value is 0% 0%.
 
-xpos ypos
+In example below the background-image is positioned at 0% horizontally and 50% vertically.
+
+![position-x-y](pics/position-x-y.png)
+
+<ins>**xpos ypos%**</ins>
 
 The first value is the horizontal position and the second value is the vertical. The top left corner is 0 0. Units can be pixels (0px 0px) or any other CSS units. If you inly specify one value, the other value will be 50%. You can mix % and positions.
 
-////////////////////////////// <background-repeat>
+## Example Files:
 
-Sets if/hoe a background image will be repeated. By default, a background-image is repeated both vertically and horizontally.
+[txtborder.html, 6th part](html/txtborder.html)
 
-Example: txtborder.html, 6th part; brdcolor.css, 6th part
+[To Top](#background)
 
-Property Values:
+<hr>
 
-repeat:
+## //////////////////////////////////////////////////////////// background-repeat
 
-The background image is repeated both vertically and horizontally. The last image will be clipped if it does not fit. This is default.
+Sets if/how a background image will be repeated. By default, a _background-image_ is repeated both vertically and horizontally.
 
-repeat-x or repeat-y:
+## Property Values:
 
-The background image is repeated only horizontally or vertically.
+<ins>**repeat:**</ins>
 
-Example: repeat-x
+The background image is repeated both vertically and horizontally. The last image will be clipped if it doesn't fit. This is default.
 
-Example: repeat-y
+![repeat-default.png](pics/repeat-default.png)
+
+<ins>**repeat-x & repeat-y**</ins>
+
+The background image is repeated either horizontally or vertically or both.
+
+This example repeats background image in x-direction.
+
+![repeat-x](pics/repeat-x.png)
+
+This example repeats background image in y-direction.
+
+![repeat-y](pics/repeat-y.png)
 
 no-repeat:
 
 The background-image is not repeated. The image will only be shown once.
 
-space:
+Same as in left, top example.
+
+![position-left-top](pics/position-left-top.png)
+
+<ins>**space:**</ins>
 
 The background-image is repeated as much as possible without clipping. The first and last images are pinned to either side of the element, and whitespace is distributed evenly between the images.
 
-round:
+![position-left-top](pics/repeat-space.png)
 
-The background-image is repeated and squished or stretched to fill the space (no gaps).
+<ins>**round:**</ins>
 
-////////////////////////////// <background-size>
+The _background-image_ is repeated and squished or stretched to fill the space (no gaps).
+
+![position-left-top](pics/repeat-round.png)
+
+## Example Files:
+
+[txtborder.html, 6th part](html/txtborder.html)
+
+[To Top](#background)
+
+<hr>
+
+## //////////////////////////////////////////////////////////// background-size
 
 Specifies the size of the background images.
 
@@ -271,24 +342,38 @@ Example: txtborder.html, 6th part; brdcolor.css, 6th part
 
 Property Values:
 
-auto:
+<ins>**auto:**</ins>
 
 Default value. The background image is displayed in its original size.
 
-length:
+![size-auto](pics/size-auto.png)
+
+<ins>**length:**</ins>
 
 Sets the width and height of the background image. The 1st value sets the width, the second value sets the height. If only one value is given, the second is set to “auto”.
 
-Example: background-size: 10vh 15vh;
+The background-image has a background-size of 10vh & 15vh:
 
-percentage:
+![size-length](pics/size-length.png)
 
-Sets the width and height of the background image in percent of the parent element. Same as in length.
+<ins>**percentage:**</ins>
 
-cover:
+Sets the width and height of the background image in percent of the parent element. Same as with length-attribute.
+
+<ins>**cover:**</ins>
 
 Resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges.
+
+![size-cover](pics/size-cover.png)
 
 contain:
 
 Resize the background image to make sure the image is fully visible.
+
+## Example Files:
+
+[txtborder.html, 6th part](html/txtborder.html)
+
+[To Top](#background)
+
+<hr>

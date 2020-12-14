@@ -155,10 +155,13 @@ table td {
 /* txtcolor.html, 6th part */
 
 #stiky {
-  background-image: url(/CSS-Ref/pics/stickman.png),
+  background-image: url(/pics/stickman.png),
     linear-gradient(rgb(147, 147, 88), rgb(147, 147, 88), rgb(147, 147, 88));
   background-repeat: no-repeat;
-  background-size: contain;
+  /* background-size: ; */
+  background-position: top left;
+  background-color: green;
+  background-size: 6rem 5rem;
   width: 30vh;
   height: 30vh;
   border: solid thick;

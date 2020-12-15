@@ -1,0 +1,24 @@
+/* //////////////////////////////////////////////////// */
+
+/* transition.html, 1st part */
+
+.delay_me {
+  width: 100px;
+  height: 100px;
+  /* transition-delay: 2s; */
+  transition-duration: 5s;
+  background: red;
+}
+
+.delay_me:hover {
+  width: 300px;
+}
+
+h2 {
+  transition-property: font-size;
+  transition-duration: 4s;
+}
+
+h2:hover {
+  font-size: 36px;
+}

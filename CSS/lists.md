@@ -19,7 +19,10 @@ The path to the image to be used as a list-item marker. In example figure the lo
 ## Example Files:
 
 [lists.html, 1st part](html/lists.html) <br>
-[lists.css, 1st part](css/lists.css)
+
+[To Top](#lists)
+
+<hr>
 
 ## //////////////////////////////////////////////////////////// list-style-position
 
@@ -42,7 +45,10 @@ The bullet points will be inside the list item.
 ## Example Files:
 
 [lists.html, 1st part](html/lists.html) <br>
-[lists.css, 1st part](css/lists.css)
+
+[To Top](#lists)
+
+<hr>
 
 ## //////////////////////////////////////////////////////////// list-style-type
 
@@ -89,4 +95,7 @@ A identifier matching the value of a `@counter-style` or one of the predefined s
 ## Example Files:
 
 [lists.html, 1st part](html/lists.html) <br>
-[lists.css, 1st part](css/lists.css)
+
+[To Top](#lists)
+
+<hr>

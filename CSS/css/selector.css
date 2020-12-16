@@ -1,0 +1,32 @@
+/* //////////////////////////////////////////////////// */
+
+/* selector.html, 1st part */
+
+* [lang^="en"] {
+  color: green;
+}
+
+*.warning {
+  color: red;
+}
+
+*#maincontent {
+  border: 1px solid blue;
+  width: 14rem;
+}
+
+/* //////////////////////////////////////////////////// */
+
+/* selector.html, 2nd part */
+
+span {
+  background-color: skyblue;
+}
+
+/* //////////////////////////////////////////////////// */
+
+/* selector.html, 3rd part */
+
+a[target] {
+  background-color: yellowgreen;
+}

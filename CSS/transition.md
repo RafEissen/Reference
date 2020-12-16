@@ -3,6 +3,7 @@
 [transition-delay](#-transition-delay) <br>
 [transition-duration](#-transition-duration) <br>
 [transition-property](#-transition-property) <br>
+[transition-timing-function](#-transition-timing-function) <br>
 
 <hr>
 

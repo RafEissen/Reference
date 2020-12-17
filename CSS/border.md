@@ -32,4 +32,6 @@ Defines the color of the border.
 
 <ins>**transparent**</ins>
 
+Specifies that the border color should be transparent.
+
 ![border-color-transparent](pics/border-color-transparent.png)

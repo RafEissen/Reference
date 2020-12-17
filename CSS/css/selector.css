@@ -27,6 +27,8 @@ span {
 
 /* selector.html, 3rd part */
 
+<a href="https://en.wikipedia.org/" target="_top">wikipedia.org</a>
+
 a[target] {
   background-color: yellowgreen;
 }

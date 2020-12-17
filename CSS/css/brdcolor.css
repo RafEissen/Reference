@@ -1,4 +1,4 @@
-/* txtcolor.html, 1st part */
+/* txtborder.html, 1st part */
 
 .example {
   text-align: center;
@@ -12,7 +12,8 @@ h1 {
 }
 
 /* ////////////////////////////////////////////////////////////////////////////// */
-/* txtcolor.html, 2nd part */
+
+/* txtborder.html, 2nd part */
 
 .exampleII {
   /* length-percentage examples */
@@ -37,7 +38,7 @@ h1 {
 
 /* ////////////////////////////////////////////////////////////////////////////// */
 
-/* txtcolor.html, 3rd part */
+/* txtborder.html, 3rd part */
 
 div {
   border: 0.5rem outset pink;
@@ -52,7 +53,7 @@ div {
 
 /* ////////////////////////////////////////////////////////////////////////////// */
 
-/* txtcolor.html, 4th part */
+/* txtborder.html, 4th part */
 
 /* Define look of the table */
 
@@ -101,7 +102,7 @@ td {
 
 /* ////////////////////////////////////////////////////////////////////////////// */
 
-/* txtcolor.html, 5th part */
+/* txtborder.html, 5th part */
 
 .collapse {
   border-collapse: collapse;
@@ -152,7 +153,7 @@ table td {
 
 /* ////////////////////////////////////////////////////////////////////////////// */
 
-/* txtcolor.html, 6th part */
+/* txtborder.html, 6th part */
 
 #stiky {
   background-image: url(/pics/stickman.png),

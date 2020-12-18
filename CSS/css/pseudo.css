@@ -17,6 +17,12 @@ input:invalid {
   background-color: #ffdddd;
 }
 
+input::placeholder {
+  color: red;
+  font-size: 1.2em;
+  font-style: italic;
+}
+
 form:invalid {
   border: 5px solid #ffdddd;
 }

@@ -1,6 +1,6 @@
 # Proceed after 'grep -C'
 
-# //////////////////////////// A
+# //////////////////////////////////////////////////////////// A
 
 # ////// alias
 
@@ -14,13 +14,13 @@ alias c='clear'
 alias ls='ls --color=auto'
 alias t='./t.sh'
 
-# //////////////////////////// B
+# //////////////////////////////////////////////////////////// B
 
 # ////// bg \*
 
 # Sends a suspended job to run in the background.
 
-# //////////////////////////// C
+# //////////////////////////////////////////////////////////// C
 
 # ////// cal
 
@@ -363,9 +363,9 @@ overwrite empty/flow.jpg? (y/n [n]) y
 
 flow.jpg -> empty/flow.jpg
 
-# //////////////////////////// D
+# //////////////////////////////////////////////////////////// D
 
-# ////// date
+## ////// date
 
 # Displays the current time and date
 
@@ -431,7 +431,7 @@ Filesystem 1M-blocks Used Available Capacity iused ifree %iused Mounted on
 /dev/disk1s1 115411 12338 90729 12% 214122 1181604318 0% /System/Volumes/Data
 /dev/disk1s4 115411 1025 90729 2% 2 1181818438 0% /private/var/vm
 
-# //////////////////////////// E
+# //////////////////////////////////////////////////////////// E
 
 # ////// eject
 
@@ -463,13 +463,17 @@ eject: `/dev/sdb1' is a multipartition device eject: using device name `/dev/sdb
 eject: trying to eject `/dev/sdb' using CD-ROM eject command
 eject: CD-ROM eject command succeeded
 
-# //////////////////////////// F
+# //////////////////////////////////////////////////////////// F
 
-# ////// fdisk
+## //////////// fd
+
+`fd` is a fast and user-friendly alternative to `find`, the built.in command-line program for walking a file hierarchy.
+
+## //////////// fdisk
 
 # Allows us to interact directly with disk-like devices (such as hard disk drives and flash drives) at a very low level. With this tool we can edit, delete, and create partitions on the device.
 
-# ////// file
+## //////////// file
 
 # Reports the type of a file. The output is an educated guess based on the file content and other factors
 
@@ -482,7 +486,7 @@ eject: CD-ROM eject command succeeded
 > jl@JLs-MacBook-Air Terminal % file fsoc.mp4
 > fsoc.mp4: ISO Media, MP4 v2 [ISO 14496-14]
 
-# ////// find
+## //////////// find
 
 # Searches one or more directories (and their subdirectories recursively) for files matching certain criteria. F.e. print filenames beginning with "myfile" :
 
@@ -492,7 +496,7 @@ eject: CD-ROM eject command succeeded
 
 ./shell/myfile1
 
-# ////// free
+## //////////// free
 
 # Displays the total amount of free and used physical and swap memory in the system, as well as the buffers and caches used by the kernel. Show beneath all output fields automatically scaled to shortest three digit unit and display the units of print out.
 
@@ -503,7 +507,7 @@ eject: CD-ROM eject command succeeded
 Mem: 1.9Gi 406Mi 1.2Gi 10Mi 339Mi 1.4Gi  
 Swap: 2.0Gi 0B 2.0Gi
 
-# //////////////////////////// G
+# //////////////////////////////////////////////////////////// G
 
 ## //////////// gedit <br><br>
 
@@ -689,7 +693,7 @@ v01.txt:7:alfones # (document : v01.txt; line : 7)
 
 v01.txt:petro
 
-# //////////////////////////// H
+# //////////////////////////////////////////////////////////// H
 
 # ////// halt
 
@@ -734,7 +738,7 @@ zenit
 
 > JLs-MacBook-Air:Desktop jl\$ !5
 
-# //////////////////////////// I
+# //////////////////////////////////////////////////////////// I
 
 # ////// id
 
@@ -774,7 +778,7 @@ asid=100006
 
 # ////// ip
 
-# //////////////////////////// K
+# //////////////////////////////////////////////////////////// K
 
 # ////// kill
 
@@ -819,7 +823,7 @@ Killed xlogo(1508) with signal 15
 TERM: no process found
 [1]+ Terminated xlogo
 
-# //////////////////////////// L
+# //////////////////////////////////////////////////////////// L
 
 # ////// less
 
@@ -1086,7 +1090,7 @@ f001.m4a f003.m4a fsoc.m4a macOS_bash.txt
 copy f001.m4a f002.m4a f003.m4a flow.jpg
 fsoc.m4a fsoc.mp4 macOS_bash.txt void.txt
 
-# //////////////////////////// M
+# //////////////////////////////////////////////////////////// M
 
 # ////// man
 
@@ -1192,7 +1196,7 @@ not overwritten
 
 flow.jpg -> /Users/jl/Terminal/empty/flow.jpg
 
-# //////////////////////////// P
+# //////////////////////////////////////////////////////////// P
 
 # ////// passwd
 
@@ -1391,7 +1395,7 @@ systemd─┬─ModemManager───2*[{ModemManager}]
 
 # Displays the current working directory
 
-# //////////////////////////// R
+# //////////////////////////////////////////////////////////// R
 
 # ////// rm
 
@@ -1425,7 +1429,7 @@ remove empty? y
 
 # Output : (wipes everything, use )
 
-# //////////////////////////// S
+# //////////////////////////////////////////////////////////// S
 
 # ////// script
 
@@ -1457,7 +1461,7 @@ remove empty? y
 
 # Allows a permitted user to execute a command as the superuser or another user, as specified by the security policy. One special user, called the superuser or root, has full access to the machine and can do anything on it.
 
-# //////////////////////////// T
+# //////////////////////////////////////////////////////////// T
 
 # ////// tail
 
@@ -1586,7 +1590,7 @@ traceroute to yandex.ru (77.88.55.66), 30 hops max, 60 byte packets
 
 # Output : alias is a shell builtin
 
-# //////////////////////////// U
+# //////////////////////////////////////////////////////////// U
 
 # ////// umask
 
@@ -1707,7 +1711,7 @@ sonne
 valiant
 vintar
 
-# //////////////////////////// V
+# //////////////////////////////////////////////////////////// V
 
 # ////// vmstat
 
@@ -1757,7 +1761,7 @@ id: Time spent idle. Prior to Linux 2.5.41, this includes IO-wait time.
 wa: Time spent waiting for IO. Prior to Linux 2.5.41, included in idle.
 st: Time stolen from a virtual machine. Prior to Linux 2.6.11, unknown.
 
-# //////////////////////////// W
+# //////////////////////////////////////////////////////////// W
 
 # ////// wc
 
@@ -1799,7 +1803,7 @@ Saving to: ‘3aMrz8p’
 
 # -c : Continue mode which is added ability to resume a download if it gets interrupted in the middle, say, due to a network failure: just run wget -c with the same URL and it picks up where it left off
 
-# //////////////////////////// X
+# //////////////////////////////////////////////////////////// X
 
 # ////// xargs
 
@@ -1811,7 +1815,7 @@ Saving to: ‘3aMrz8p’
 
 -rw-r--r-- 1 kali kali 0 Apr 27 17:07 /home/kali/shell/foo.txt
 
-////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 # G
 

@@ -5,7 +5,8 @@
 [::after & ::before](#-after---before) <br>
 [::first-letter](#-first-letter) <br>
 [::first-line](#-first-line) <br>
-[::selection](#-first-line) <br>
+[::placeholder](#-placeholder) <br>
+[::selection](#-selection) <br>
 
 # Pseudo-Classes
 
@@ -84,13 +85,29 @@ Applies to the first line of a block-level element.
 
 **Note:** The length of first line depends on many factors, including the width of the element, the width of the document, and the font size of the text.
 
-## Example:
-
 ![::first-line](pics/first-line.png)
 
 ## Example Files:
 
 [lists.html 4th part](html/lists.html) <br>
+
+[To Top](#pseudo-elements---classes)
+
+<hr>
+
+## //////////////////////////////////////////////////////////// ::placeholder
+
+Represents the placeholder text in an `<input>` or `<textarea>` element.
+
+**Note:** In most browsers, the appearance of placeholder text is a translucent or light gray color by default.
+
+## Example:
+
+![placeholder-element](pics/placeholder-element.png)
+
+## Example Files:
+
+[pseudo.html 1st part](html/pseudo.html) <br>
 
 [To Top](#pseudo-elements---classes)
 
@@ -446,7 +463,7 @@ Represents elements in a list whose indices match those found in a custom patter
 
 It can be read as the *An+B*th element of a list.
 
-## Examples:
+## Example:
 
 ![nth_child_examples](pics/nth-child_examples.png)
 

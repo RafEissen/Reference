@@ -1,6 +1,7 @@
 # Overview
 
-[Box Model](#-box-model)
+[Box Model](#-box-model) <br>
+[Box Model Example](#example)
 
 # Layouts
 
@@ -56,6 +57,8 @@ On the other hand, inline elements are sized _intrinsically_ (prescribed width a
 
 ![inline-block](pics/inline-block.png)
 
+[To Top](#overview)
+
 ## Content in Boxes
 
 Without intervention, it is the contents of an element that determines its size and shape. Content makes `inline` elements grow horizontally, and `block` elements grow vertically. Left to its own devices, the area of a box is determined by the area of the content it contains. Because web content is _dynamic_ (subject to change), static representations of web layouts ar extremely misleading.
@@ -99,5 +102,99 @@ Implicitly, the `height` is also set to `auto`, meaning it is derived from the c
 ## What if these values are undeclared?
 
 If padding or borders are undeclared, they are either zero (likely if you are using a [css reset](https://css-tricks.com/poll-results-what-css-reset-do-you-use/)) or the browser default value (probably **not** zero especially on form elements that are commonly not reset). More on that read below in [CSS Reset section](#-CSS-Reset)
+
+[To Top](#overview)
+
+## Example:
+
+Lets recreate following example from: [Gradient Hero.](https://github.com/RafEissen/Exercises/blob/main/December/exercises.md#gradient-hero)
+
+Here is the mockup picture:
+
+![mockup picture](pics/example-01-desktop.png)
+
+Here is the HTML-code:
+
+![html part](pics/html-structure.png)
+
+### First Part
+
+Initially we can divide the screen in two parts. First part is going to be filled with image as a background property. For that to happen we have to create a box by mentioning only the visual height of `75vh`:
+
+> height: 75vh;
+
+Once the box is established, we can start to implement our image as a background together with multiple gradient stops. In order to center the image we have to mention `background-position: center` as well as `no-repeat` in order for the image stop repeating itself and also fully cover the given container section.
+
+Here is the CSS snippet:
+
+> background-repeat: no-repeat; <br>
+> background-position: center; <br>
+> background-size: cover;<br>
+
+Finally we can apply our `linear-gradient` property on the picture and start with the second part of the exercise.
+
+### Second Part
+
+Second part is text part with a black `background-color` property which is wrapped in another `<section>` called _txt_half_. In the beginning we can crate distance from the 1st half by mentioning the top-bottom `padding` property:
+
+```
+.txt_half {
+  background-color: black;
+  padding: 3.75rem 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+```
+
+Now our page looks like this:
+
+![padding](pics/padding-mockup.png)
+
+The text inside _txt-half_ `<section>` is going to be put in a `<div>` called _main-container_, which will be centered with the maximum width of `60rem` (you can also use `%` unit) and vertically aligned with left-right `padding`.
+
+```
+.main-container {
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  max-width: 60rem;
+}
+```
+
+![padding](pics/div-padding.png)
+
+Next step comes with styling of `<h1>` header:
+
+```
+.main-container h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+}
+```
+
+After that we can add some distance to our text container:
+
+```
+.columns {
+  padding: 1.2rem 0;
+  margin-top: 1.3rem;
+}
+```
+
+![columns-container](pics/columns-container.png)
+
+Final step concludes the editing of _txt_half_ section. here we give the maximum width of 70% to text blocks, edit line heights as well as `font-size` and add some margin.
+
+```
+.main-container p {
+  max-width: 70%;
+  line-height: 1.5;
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+```
+
+The final result looks like this:
+
+![final-result](pics/final-result.png)
 
 [To Top](#overview)

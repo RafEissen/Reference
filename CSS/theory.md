@@ -1,7 +1,8 @@
 # Overview
 
 [Box Model](#-box-model) <br>
-[Box Model Example](#example)
+[Box Model Example](#example) <br>
+[Vertical Alignment](#-vertical-alignment) <br>
 
 # Layouts
 
@@ -198,3 +199,72 @@ The final result looks like this:
 ![final-result](pics/final-result.png)
 
 [To Top](#overview)
+
+## //////////////////////////////////////////////////////////// Vertical Alignment
+
+The `vertical-align` property in CSS controls how elements set next to each other on a line are lined up. It sets vertical alignment of an inline, inline-block or table-cell box.
+
+Here's an example of how it could be used to vertically position an `<img>` in a line of text:
+
+![positioning img in a line of text](pics/vertical-alignment.png)
+
+## Example:
+
+Let's create a box with two inline-block elements in it. For this we will only use the code snippet below:
+
+```
+  <body>
+    <main>
+      <section class="box text-half">
+      </section>
+      <section class="box img-half"></section>
+    </main>
+  </body>
+```
+
+By the way our final example will look like mockup picture below:
+
+![mockup](pics/mockup.jpg)
+
+First we have to mention `padding` property in `body` element:
+
+```
+body {
+  padding: 50px;
+    border: 2px solid black;
+}
+```
+
+This will cause the `main` element in the next step to have a distance from the browser window.
+
+Now we have to center our `main` element:
+
+```
+main {
+  margin: 0 auto;
+  border: 2px solid darkslateblue;
+}
+```
+
+After these two steps we have our `main` element which has a distance in all four directions from the browser window:
+
+![padding](pics/body-main.png)
+
+Like in the mockup picture above we take two `section` elements (one for text, one for picture) and give each two separate classes:
+
+- "_.box_" for both `section` elements
+- "_.text-half_" for the first one and "_.img-half_" for the second one
+
+```
+.box {
+  border: 2px solid red;
+  width: 7.5rem;
+  height: 20vh;
+  display: inline-block;
+  vertical-align: middle;
+}
+```
+
+![inline blocks](pics/inline-blocks.png)
+
+We have both our inline blocks vertically aligned in the middle and can now style them according to the mockup picture.

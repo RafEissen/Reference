@@ -268,3 +268,73 @@ Like in the mockup picture above we take two `section` elements (one for text, o
 ![inline blocks](pics/inline-blocks.png)
 
 We have both our inline blocks vertically aligned in the middle and can now style them according to the mockup picture.
+
+## //////////////////////////////////////////////////////////// Box Folding & Expanding
+
+There might be some special case where you want to preserve an equal distance between a farther border of a box (i.e. input field) and a closer border of adjacent box by expanding/folding of a browser window. Here is an visual example:
+
+![expanding/folding](pics/width-padding.gif)
+
+You can clearly see that the width of input field goes all the way by expanding/folding of a browser window without losing any length in the process.
+
+In the first step you have to declare the width of an input field like so:
+
+```
+input {
+  width: 100%;
+}
+```
+
+![width100](pics/width100.png)
+
+It's possible that by declaring 100% width the border may go beyond the required space. In the aforementioned example the input field would transgress the border of our sections. In order to prevent this from happening we have to additionally declare padding:
+
+```
+section {
+  padding-right: 2rem;
+}
+```
+
+## //////////////////////////////////////////////////////////// Creating a Box With Padding
+
+Here is the full html code:
+
+![html](pics/html-card.png)
+
+In order to create a box with a text content without using any width, height or margin properties like the example below:
+
+![using only padding](pics/only_padding.gif)
+
+we first have to define our `padding` property in the `main` element:
+
+![define padding](pics/main-padding.png)
+
+```
+main {
+  padding: 10rem 3rem;
+  border: 1px solid rgba(30, 58, 133, 0.993);
+}
+```
+
+After that our main job is almost done. We only have to define our `linear-gradient` function to cover full page:
+
+```
+body {
+  background-image: linear-gradient(
+      -40deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 127, 80, 0.9)
+    ),
+    linear-gradient(10deg, purple, hotpink);
+}
+```
+
+and later edit our `section` element:
+
+```
+section {
+  padding: 1rem 2.5rem 3rem 2.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 20px 10px #0000000d;
+}
+```

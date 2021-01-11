@@ -1,10 +1,19 @@
 # Overview
 
+Add 'flex' and 'order' topics
+
 [align content](#-align-content) <br>
 [align items](#-align-items) <br>
 [align self](#-align-self) <br>
+[flex basis](#-flex-basis) <br>
+[flex direction](#-flex-direction) <br>
+[flex flow](#-flex-flow) <br>
+[flex grow](#-flex-grow) <br>
+[flex shrink](#-flex-shrink) <br>
+[flex wrap](#-flex-wrap) <br>
 [justify content](#-justify-content) <br>
 [justify items](#-justify-items) <br>
+[justify self](#-justify-self) <br>
 
 Flexbox is very popular because it brought better alignment capabilities to the web and enabled proper vertical alignment, so it's gonna be easier now to center a box. This reference will show most properties for the <ins>parent element (the flex container)</ins> and <ins>the child elements (the flex items)</ins>.
 
@@ -130,6 +139,33 @@ Property values have same behavior as in `align-items` property.
 
 [To Top](#overview)
 
+## //////////////////////////////////////////////////////////// `flex-basis`
+
+Sets the initial main size of a flex item before the remaining space is distributed.
+
+## Property Values:
+
+<ins>**length_unit**</ins>
+
+A length unit, or percentage, specifying the initial length of the flexible item(s).
+
+<ins>**auto**</ins>
+
+Default. The length is equal to the length of the flexible item. If the item has no length specified, the length will be according to its content.
+
+**Alt:** If set to `auto`, the extra space is distributed based on its `flex-grow` value.
+
+In example below both bars have their fixed value so there is no room left to grow which will be explained in `flex-grow` property.
+
+![flex basis](pics/flex-basis.gif)
+
+Example Files:
+
+[transition.html 2nd part](html/transition.html) <br>
+[transition.css 2nd part](css/transition.css) <br>
+
+[To Top](#overview)
+
 ## //////////////////////////////////////////////////////////// `flex-direction`
 
 Sets how flex items are placed in the flex container defining the main axis and the direction (normal or reversed). Think of flex items as primarily laying out either in horizontal rows or vertical columns.
@@ -161,6 +197,34 @@ Same as column, but in reverse order.
 ## //////////////////////////////////////////////////////////// `flex-flow`
 
 This is a shorthand for the `flex-direction` and `flex-wrap` properties, which together define the flex container's main and cross axes. The default value is _row nowrap_.
+
+[To Top](#overview)
+
+## //////////////////////////////////////////////////////////// `flex-grow`
+
+Overview:
+
+![flex grow](pics/flex-grow.png)
+
+Specifies how much the item will grow relative to the rest of the flexible items inside the same container.
+
+If all items have `flex-grow` set to 1, the remaining space in the container will be distributed equally to all children. If one of the children has a value of 2, the remaining space would take up twice as much space as the others (or it will try to, at least).
+
+## Property Values:
+
+<ins>**_number_**</ins>
+
+A number specifying how much the item will grow relative to the rest of the flexible items. Default value is 0.
+
+In example below, the right side bar has a fixed length side of 30rem and thus will not be subjected to shaping. The left side bar on the other hand doesn't have any fixed length but only a grow factor of 1 which allows it to take space by resizing the window.
+
+![flex grow](pics/flex-grow.gif)
+
+[To Top](#overview)
+
+## //////////////////////////////////////////////////////////// `flex-shrink`
+
+Specifies how the item will shrink relative to the rest of the flexible items inside the same container. It behaves in the same way as `flex-grow` but in opposite direction.
 
 ## //////////////////////////////////////////////////////////// `flex-wrap`
 

@@ -22,3 +22,53 @@ h2 {
 h2:hover {
   font-size: 36px;
 }
+
+/* //////////////////////////////////////////////////// */
+
+/* transition.html, 2nd part */
+
+.layout-1 {
+  margin-bottom: 2rem;
+  display: flex;
+}
+
+.left {
+  background-color: deeppink;
+  padding: 2rem;
+}
+
+.right {
+  background-color: goldenrod;
+  padding: 2rem;
+}
+
+.layout-1 {
+  flex-direction: row;
+}
+
+.layout-1 .left {
+  flex-basis: 75%;
+}
+
+.layout-1 .right {
+  flex-basis: 25%;
+}
+
+/* //////////////////////////////////////////////////// */
+
+/* transition.html, 3rd part */
+
+.layout-2 {
+  margin-bottom: 5rem;
+  display: flex;
+}
+
+.layout-2 .left {
+  /* flex-grow: 1; */
+  flex: 1;
+}
+
+/* Always 300px */
+.layout-2 .right {
+  flex-basis: 30rem;
+}

@@ -339,4 +339,17 @@ section {
 }
 ```
 
-## ////////////////////////////////////////////////////////////
+## //////////////////////////////////////////////////////////// Aligning Items in a Flex Container
+
+To center our box we use the `align-items` property to align our item on the cross axis, which in this case is the block axis running vertically. We use `justify-content` to align the item on the main axis, which in this case the inline axis running horizontally.
+
+![position items in flexbox](pics/main-cross-axis.png)
+
+## Properties that control alignment:
+
+- `justify-content` - controls alignment of all items in the main axis.
+- `align-items` - controls alignment of all items on the cross axis.
+- `align-self` - controls alignment of an individual flex item on the cross axis.
+- `align-content` - controls space between flex lines on the cross axis.
+
+(To be continued)

@@ -5,6 +5,7 @@ Add 'flex' and 'order' topics
 [align content](#-align-content) <br>
 [align items](#-align-items) <br>
 [align self](#-align-self) <br>
+[flex ](#-flex) <br>
 [flex basis](#-flex-basis) <br>
 [flex direction](#-flex-direction) <br>
 [flex flow](#-flex-flow) <br>
@@ -14,6 +15,7 @@ Add 'flex' and 'order' topics
 [justify content](#-justify-content) <br>
 [justify items](#-justify-items) <br>
 [justify self](#-justify-self) <br>
+[order](#-order) <br>
 
 Flexbox is very popular because it brought better alignment capabilities to the web and enabled proper vertical alignment, so it's gonna be easier now to center a box. This reference will show most properties for the <ins>parent element (the flex container)</ins> and <ins>the child elements (the flex items)</ins>.
 
@@ -138,6 +140,22 @@ Short overview:
 Property values have same behavior as in `align-items` property.
 
 [To Top](#overview)
+
+## //////////////////////////////////////////////////////////// `flex`
+
+Is the shorthand for `flex-grow`, `flex-shrink` and `flex-basis` combined. The second and third parameters (`flex-shrink` and `flex-basis`) are optional. The default is '0 1 auto', but if you set it with a single number value, it's like '1 0'.
+
+**Note:** It is recommended that you use this shorthand property rather than set the individual properties. The shorthand sets the other values intelligently.
+
+## Property Values:
+
+<ins>**none**</ins>
+
+The item is sized according to its `width` and `height` properties. It is fully inflexible: it neither shrinks nor grows in relation to the flex container. This is equivalent to setting `flex: 0 0 auto`.
+
+<ins>**auto**</ins>
+
+The item is sized according to its `width` and `height` properties, but grows to absorb any extra free space in the flex container, and shrinks to its minimum size to fit the container. This is equivalent to setting `flex: 1 1 auto`.
 
 ## //////////////////////////////////////////////////////////// `flex-basis`
 
@@ -281,3 +299,9 @@ Sets the way a box is justified inside its alignment container along the appropr
 **Note:** In flexbox layouts, this property is <ins>**ignored**</ins>.
 
 [To Top](#overview)
+
+## //////////////////////////////////////////////////////////// `order`
+
+Sets the order to lay out an item in a flex or grid container. Items in a container are sorted by ascending _order_ value and then by their source code order.
+
+![align-items-order](pics/align-items-order.png)

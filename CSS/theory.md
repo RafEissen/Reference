@@ -1,8 +1,14 @@
 # Overview
 
 [Box Model](#-box-model) <br>
+[Box Sizing](#the-box-sizing-property) <br>
 [Box Model Example](#example) <br>
+[Minimum Height](#-min-height) <br>
+[Maximum Height](#-max-height) <br>
+[Minimum Width](#-min-width) <br>
+[Maximum Width](#-max-width) <br>
 [Vertical Alignment](#-vertical-alignment) <br>
+[Aligning Items in a Flex Container](#-aligning-items-in-a-flex-container) <br>
 
 # Layouts
 
@@ -134,6 +140,8 @@ Here is the CSS snippet:
 
 Finally we can apply our `linear-gradient` property on the picture and start with the second part of the exercise.
 
+[To Top](#overview)
+
 ### Second Part
 
 Second part is text part with a black `background-color` property which is wrapped in another `<section>` called _txt_half_. In the beginning we can crate distance from the 1st half by mentioning the top-bottom `padding` property:
@@ -200,6 +208,64 @@ The final result looks like this:
 
 [To Top](#overview)
 
+## //////////////////////////////////////////////////////////// `min-height`
+
+Defines the maximum height of an element. If the content is smaller than the minimum height, the minimum height will be applied. If the content is larger than the minimum height, the `min-height` property has no effect.
+
+Let's take an example to demonstrate a simple use case.
+
+We have a section with a description text. The goal is to have a minimum height for the section, so it can handle short or long content.
+
+![min-height-exampleI](pics/min-height-exampleI.png)
+
+The minimum height is `100px`, and with flexbox, the content is centered horizontally and vertically. Now the height of the section will expand to contain the new content. By having that, we can build components that are fluid and responsive to its content.
+
+![min-height-exampleI](pics/min-height-exampleII.png)
+
+[To Top](#overview)
+
+## //////////////////////////////////////////////////////////// `max-height`
+
+Defines the maximum height of an element. If the content is larger than the maximum height, it will overflow, which is defined by the <ins>overflow</ins> property. If the content is smaller than the maximum height, the `max-height` property has no effect.
+
+![max-height-property](pics/max-height-property.png)
+
+Consider the example above. The text content is bigger than the specified space and thus it creates an overflow, which can be controlled with the `overflow` property.
+
+[To Top](#overview)
+
+## //////////////////////////////////////////////////////////// `min-width`
+
+Sets the minimum width of an element. If the content is smaller than the minimum width, the minimum width will be applied. If the content is larger than the minimum width, the `min-width` property has no effect.
+
+**Note:** The `min-width` property prevents the value of the <ins>width</ins> property from becoming smaller than `min-width`.
+
+Note that the default value for `min-width` is `auto`, which resolves to `0`. Let's take a look at the example below:
+
+![min-width-property](pics/min-width-property.png)
+
+We have a button with a varying text within in. The text might range from one word to multiple. To guarantee that it will have a minimum width even if it has one word only, `min-width` should be used. The minimum width is `100px` so that even if the button has a very short content, like "Done" word, or an icon only, it will be big enough to be noticed.
+
+In case the button width gets longer, `padding` on the horizontal sides should be added to achieve a proper looking button.
+
+![min-width_padding](pics/min-width_padding.png)
+
+[To Top](#overview)
+
+## //////////////////////////////////////////////////////////// `max-width`
+
+Sets the maximum width of an element. If the content is larger than the maximum width, it will automatically change the height of the element. If the content is smaller than the maximum width, the `max-width` property has no effect.
+
+**Note:** The `max-width` property prevents the value of the <ins>width</ins> property from becoming larger than `max-width`. The value of the `max-width` property overrides the width property. The default value for `max-width` is `none`.
+
+A common and simple use case for `max-width` is using it with images. Consider the below example:
+
+![max-width-property](pics/max-width-property.png)
+
+The image is larger that its parent element. By using `max-width: 100%`, the width of the image won't exceed the width of its parent. In case the image is smaller than its parent, `max-width: 100%` won't have an actual effect on the image, because it's smaller that its parent.
+
+[To Top](#overview)
+
 ## //////////////////////////////////////////////////////////// Vertical Alignment
 
 The `vertical-align` property in CSS controls how elements set next to each other on a line are lined up. It sets vertical alignment of an inline, inline-block or table-cell box.
@@ -207,6 +273,8 @@ The `vertical-align` property in CSS controls how elements set next to each othe
 Here's an example of how it could be used to vertically position an `<img>` in a line of text:
 
 ![positioning img in a line of text](pics/vertical-alignment.png)
+
+[To Top](#overview)
 
 ## Example:
 
@@ -269,6 +337,8 @@ Like in the mockup picture above we take two `section` elements (one for text, o
 
 We have both our inline blocks vertically aligned in the middle and can now style them according to the mockup picture.
 
+[To Top](#overview)
+
 ## //////////////////////////////////////////////////////////// Box Folding & Expanding
 
 There might be some special case where you want to preserve an equal distance between a farther border of a box (i.e. input field) and a closer border of adjacent box by expanding/folding of a browser window. Here is an visual example:
@@ -294,6 +364,8 @@ section {
   padding-right: 2rem;
 }
 ```
+
+[To Top](#overview)
 
 ## //////////////////////////////////////////////////////////// Creating a Box With Padding
 
@@ -339,6 +411,8 @@ section {
 }
 ```
 
+[To Top](#overview)
+
 ## //////////////////////////////////////////////////////////// Aligning Items in a Flex Container
 
 To center our box we use the `align-items` property to align our item on the cross axis, which in this case is the block axis running vertically. We use `justify-content` to align the item on the main axis, which in this case the inline axis running horizontally.
@@ -352,4 +426,78 @@ To center our box we use the `align-items` property to align our item on the cro
 - `align-self` - controls alignment of an individual flex item on the cross axis.
 - `align-content` - controls space between flex lines on the cross axis.
 
-(To be continued)
+[To Top](#overview)
+
+## //////////////////////////////////////////////////////////// Flex Basis
+
+The `flex-basis` property sets the size of the flex item before growing and shrinking happens.
+
+**Alt:** It specifies the initial size of the flex item before any space distribution happens.
+
+The initial value for this property is `auto`. If `flex-basis` is set to `auto` then to work out the initial size of the item the browser first checks if the main size of the item has an absolute size set.
+
+Following example shows a series of inflexible boxes, with both `flex-grow` and `flex-shrink` set to `0`. Here we can see how the first item - which has an explicit width of 150px set as the main size - takes a `flex-basis` of `150px`, whereas the other two items have no width and so are sized according <ins>to their content width.</ins>
+
+![flex basis example](pics/flex-basis-example.gif)
+
+If you want to completely ignore the size of the item when doing space distribution then set `flex-basis` to `0`. This essentially tells flexbox that all the space is up for grabs, and to share it out in proportion. In this case the box will be sized to its content width.
+However if the `flex-basis` gets overwritten with the new size of `160px` like this
+
+> **HTML**
+
+```
+ <div class="box">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+      </div>
+```
+
+> **CSS**
+
+```
+ .box {
+        display: flex;
+      }
+
+      .box :first-child {
+        width: 150px;
+      }
+
+      .box > * {
+        flex: 0 0 160px;
+      }
+```
+
+then all flex items will be equally sized to `160px`. including the first one.
+
+## //////////////////////////////////////////////////////////// Flex Grow
+
+The `flex-grow` property specifies the **flex frow factor**, which determines how much the flex item will grow relative to the rest of the flex items in the flex container when the positive free space is distributed.
+
+If you use `1` as the grow factor, the space would be distributed evenly between all of flex items. However you could also give them all a `flex-grow` of `88`, or `100`, or `1.2` if you like - it is a ratio.
+
+![flex basis example](pics/flex-grow-zero-auto.gif)
+
+```
+ .box {
+        display: flex;
+      }
+
+      .box :first-child {
+        width: 150px;
+      }
+
+      .box > * {
+        flex: 1 0 auto;
+      }
+```
+
+> `flex: 1 1 auto;`
+
+We are working with a `flex-basis` equal to the content size so the available space to distribute is subtracted from the total available space (the width of the flex container), and the leftover space is then shared out equally among each item. <br>
+Our bigger item ends up bigger because <ins>it started from a bigger size</ins>, even though it has the same amount of spare space assigned to it as the others.
+
+> `flex: 1 1 0;`
+
+Here we are saying that the size of the item for the purpose of our space distribution calculation is `0` - all the space is up for grabs and as all of the items have the same `flex-grow` factor, they each get an equal amount of space distributed. The end result is three equal width, flexible items.

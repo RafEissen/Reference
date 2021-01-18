@@ -9,8 +9,10 @@
 [Maximum Width](#-max-width) <br>
 [Vertical Alignment](#-vertical-alignment) <br>
 [Aligning Items in a Flex Container](#-aligning-items-in-a-flex-container) <br>
-
-# Layouts
+[Flex Grow](#-flex-grow) <br>
+[Flex Basis](#-flex-basis) <br>
+[Flex Grow Factor](#-flex-grow-factor) <br>
+[Flex Shrink](#-flex-shrink) <br>
 
 ## //////////////////////////////////////////////////////////// Box-Model
 
@@ -471,6 +473,15 @@ However if the `flex-basis` gets overwritten with the new size of `160px` like t
 
 then all flex items will be equally sized to `160px`. including the first one.
 
+## Summary:
+
+1. Is `flex-basis` set to `auto`, and does the item have a width set? If so, the size will be based on that width.
+2. Is `flex-basis` set to `auto` or `content` (in a supporting browser)? If so, the size is based on the item size.
+3. Is `flex-basis` a length unit, but not zero? If so this is the size of the item.
+4. Is `flex-basis` set to `0`? If so then the item size is not taken into consideration for the space-sharing calculation.
+
+[To Top](#overview)
+
 ## //////////////////////////////////////////////////////////// Flex Grow
 
 The `flex-grow` property specifies the **flex frow factor**, which determines how much the flex item will grow relative to the rest of the flex items in the flex container when the positive free space is distributed.
@@ -501,3 +512,106 @@ Our bigger item ends up bigger because <ins>it started from a bigger size</ins>,
 > `flex: 1 1 0;`
 
 Here we are saying that the size of the item for the purpose of our space distribution calculation is `0` - all the space is up for grabs and as all of the items have the same `flex-grow` factor, they each get an equal amount of space distributed. The end result is three equal width, flexible items.
+
+[To Top](#overview)
+
+## //////////////////////////////////////////////////////////// Flex Grow Factor
+
+Let's take a look at following example:
+
+![flex-grow-factors](pics/flex-grow-factors.png)
+
+Working from a `flex-basis` pf `0` this means that the available space is distributed as follows. We need to add up the flex grow factors, then divide the total amount of positive free space in the flex container by that number, which in this case is 4. We then share out the space according to the individual values:
+
+- the first item gets one part
+- the second one part
+- the third two parts
+
+This means that the <ins>third item is twice the size of the first and second items</ins>.
+
+Remember that you can only use positive values and it is the ratio between one item and the others that matters. Next example shows implementation of various ratios:
+
+![flex-grow-factors](pics/flex-grow-factors.gif)
+
+[To Top](#overview)
+
+## //////////////////////////////////////////////////////////// Flex Shrink
+
+The `flex-shrink` property specifies the **flex shrink factor**, which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when negative free space is distributed.
+
+This property deals with situations where the browser calculates the `flex-basis` values of the flex items, and finds that they are too large to fit into the flex container. As long as `flex-shrink` has a positive value the items will shrink in order that they do not overflow the container.
+
+So where `flex-grow` deals with adding available space, `flex-shrink` manages taking away space to make boxes fit into their container <ins>without overflowing.</ins>
+
+In the next example there are three items in a flex container; each item has a width of `200px`, and the container is `500px` wide. With `flex-shrink` set to `0` the items are not allowed to shrink and so they overflow the box.
+
+![flex shrink](pics/flex-shrink.gif)
+
+Change the `flex-shrink` value `1` and you will see each item shrink by the same amount, in order that all of the items now fit in the box. They have become smaller than their initial width in order to do so.
+
+**Note:** The flex shrink factor is multiplied by the flex base size when distributing negative space. This distributes negative space in proportion to how much the item is able to shrink, so that e.g. a small item won't shrink to zero before a larger item has been noticeably reduced.
+
+Flexbox prevents small items from shrinking to zero size during this removal of negative free space. The items will be floored at their `min-content` size - the size that they become if they take advantage of any soft wrapping opportunities available to them.
+
+In the next example you can change the width on the flex container - increasing it to `700px` for example - and then reduce the flex width, you can see that the first two items will wrap, however they will never become smaller than its `min-content` size. As the box gets smaller space is then just removed from the third item.
+
+![flex shrink](pics/flex-shrink-example.gif)
+
+## Summary: Do we have available space?
+
+Items can't grow with no positive free space, and they won't shrink unless there is negative free space.
+
+1. If we take all the widths of flex items and sum them up and this sum is **less** than the total width of the container then you have <ins>positive space</ins> and `flex-grow` comes into play.
+2. If the total sum of flex items widths is **more** than the total width of the container, then you have a negative space and `flex-shrink` comes into play.
+
+[To Top](#overview)
+
+## //////////////////////////////////////////////////////////// Grid
+
+CSS Grid Layout is a 2-dimensional system, meaning it can handle both columns and rows, unlike flexbox which is largely a 1-dimensional system. You work with Grid Layout by applying CSS rules both to a parent element (which becomes the Grid Container) and to that element's children (which become Grid Items).
+
+## The Grid Container and Grid Items
+
+We create a _grid container_ by declaring `display: grid`or display: `inline-grid` on an element. As soon as we do this, all _direct children_ of that element become _grid items_.
+
+Take a look at this code:
+
+```
+<div class="wrapper">
+  <div class="item item-1"> </div>
+  <div class="item item-2"> </div>
+  <div class="item item-3"> </div>
+</div>
+```
+
+In this example `wrapper` is the grid container.
+
+The children (i.e. _direct_ descendants) of the grid container. Here the `item` elements are grid items, but `sub-item` isn't.
+
+```
+<div class="container">
+  <div class="item"> </div>
+  <div class="item">
+    <p class="sub-item"> </p>
+  </div>
+  <div class="item"> </div>
+</div>
+```
+
+## Grid Line
+
+The dividing lines that make up the structure of the grid. They can be either vertical ("column grid lines") or horizontal ("row grid lines") and reside on either side of a row or column. Here the yellow line is an example of a column grid line.
+
+![grid line](pics/grid-line.png)
+
+## Grid Cell
+
+The space between two adjacent row and two adjacent column grid lines. It's a single "unit" of the grid. Here's the grid cell between row grid lines 1 and 2, and column grid lines 2 and 3.
+
+![grid line](pics/grid-cell.png)
+
+## Grid Track
+
+The space between two adjacent grid lines. Yu can think of them like the columns or rows of the grid. Here's the grid track between the second and third row grid lines.
+
+![grid-track](pics/grid-track.png)

@@ -598,11 +598,15 @@ The children (i.e. _direct_ descendants) of the grid container. Here the `item` 
 </div>
 ```
 
+[To Top](#overview)
+
 ## Grid Line
 
 The dividing lines that make up the structure of the grid. They can be either vertical ("column grid lines") or horizontal ("row grid lines") and reside on either side of a row or column. Here the yellow line is an example of a column grid line.
 
 ![grid line](pics/grid-line.png)
+
+[To Top](#overview)
 
 ## Grid Cell
 
@@ -612,6 +616,43 @@ The space between two adjacent row and two adjacent column grid lines. It's a si
 
 ## Grid Track
 
-The space between two adjacent grid lines. Yu can think of them like the columns or rows of the grid. Here's the grid track between the second and third row grid lines.
+The space between two adjacent grid lines. You can think of them like the columns or rows of the grid. Here's the grid track between the second and third row grid lines. We define rows and columns on our grid with the `grid-template-columns` and `grid-template-rows` properties.
 
 ![grid-track](pics/grid-track.png)
+
+[To Top](#overview)
+
+## Grid Area
+
+The total space surrounded by four grid lines. A grid area may be composed of any number of grid cells. Here's the grid area between row grid lines 1 and 3, adn column grid lines 1 and 3.
+
+![grid-area](pics/grid-area.png)
+
+## The fr Unit
+
+Grid introduces an additional length unit to help us create flexible grid tracks. The new <code>fr</code> unit represents a fraction of the available space in the grid container. The next grid definition would create three equal width tracks that grow and shrink according to the available space.
+
+![grid-fr-unit](pics/grid-fr-unit.png)
+
+## repeat() notation
+
+In order to repeat all or a section of the track listing we can also use the repeat() notation. So the same code above can be written as:
+
+```
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+```
+
+repeat() notation can be used for a part of the track listing. In this next example I have created a grid with an initial 20-pixel track, then a repeating section of 6 <code>1fr</code> tracks then a final 20-pixel track.
+
+```
+  display: grid;
+  grid-template-columns: 20px repeat(6, 1fr) 20px;
+```
+
+repeat() notation takes the track listing, and uses it to create a repeating pattern of tracks. In this next example the grid will consist of 10 tracks, a <code>1ft</code> track, and then followed by a <code>2fr</code> track. This pattern will be repeated five times.
+
+```
+  display: grid;
+  grid-template-columns: repeat(5, 1fr 2fr);
+```

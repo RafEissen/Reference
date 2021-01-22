@@ -1,0 +1,42 @@
+:root {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  /* border: 0.1px solid rgba(255, 255, 255, 0.7); */
+}
+
+/* body {
+  padding: 0 10rem;
+} */
+
+.demo {
+  border-top: 100px solid #ccc;
+  height: 300px;
+}
+
+@keyframes grow {
+  0% {
+    font-size: 0;
+  }
+  100% {
+    font-size: 40px;
+  }
+}
+
+.demo:hover .grows {
+  animation-name: grow;
+  animation-duration: 3s;
+  animation-delay: 3s;
+  animation-fill-mode: backwards;
+}
+
+.demo:hover .growsandstays {
+  animation-name: grow;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}

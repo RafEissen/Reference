@@ -634,6 +634,8 @@ Grid introduces an additional length unit to help us create flexible grid tracks
 
 ![grid-fr-unit](pics/grid-fr-unit.png)
 
+[To Top](#overview)
+
 ## repeat() notation
 
 In order to repeat all or a section of the track listing we can also use the repeat() notation. So the same code above can be written as:
@@ -656,3 +658,110 @@ repeat() notation takes the track listing, and uses it to create a repeating pat
   display: grid;
   grid-template-columns: repeat(5, 1fr 2fr);
 ```
+
+[To Top](#overview)
+
+## Track sizing with minmax()
+
+When setting up an explicit grid or defining the sizing for automatically created rows or columns we may want to give tracks a minimum size, but also ensure they expand to fit any content that is added.
+
+Following example applies <code>minmax()</code> in the value of <code>grid-auto-rows</code>. This means automatically created rows will be a minimum of `100px` tall, and a maximum of `auto`. Using `auto` means that the size will look at the content size and will stretch to give space for the tallest item in a cell, in this row.
+
+![minmax](pics/minmax.png) <br>
+![minmax](pics/minmaxII.png) <br>
+
+[To Top](#overview)
+
+## Grid Lines
+
+It should be noted that when we define a grid we define the grid tracks, not the lines. Grid then gives us numbered lines to use when positioning items.
+
+Example demonstrates a grid with three columns and two rows.
+
+![grid lines](pics/grid-lines.png)
+
+## Positioning items in a Grid
+
+When placing an item, we target the line - rather than the track.
+
+Following shows distribution where the first two items are placed on a three column track grid, using the `grid-column-start, grid-column-end, grid-row-start` and `grid-row-end` properties.
+
+![grid-positioning](pics/grid-positioning.png) <br>
+
+Working from left to right, the first item is placed against column line 1, and spans to column line 4, which in our case is the far-right line on the grid:
+
+```
+  grid-column-start: 1;
+  grid-column-end: 4;
+```
+
+You can also shorten those two commands simply by mentioning `grid-column` property:
+
+```
+  grid-column: 1 / 4;
+```
+
+**or**
+
+```
+  grid-column: 1 / -1;
+```
+
+<code>-1</code> will span all your columns.
+
+It begins at row line 1 and ends at row line 3, therefore spanning two row tracks.
+
+```
+  grid-row-start: 1;
+  grid-row-end: 3;
+```
+
+**or**
+
+```
+  grid-row-start: 1 / 3;
+```
+
+The second item starts on grid column line 1, and spans one track. This is the default so there is no need to specify the end line. It also spans two row tracks from row line 3 to row line 5. The other items will place themselves into empty spaces on the grid.
+
+![grid-positioning](pics/grid-positioningII.png) <br>
+
+[To Top](#overview)
+
+## Layering items with z-index
+
+Grid items can occupy the same cell. If we return to our example with items positioned by line number, we can change this to make two items overlap.
+
+Following example shows the <code>nav</code> bar positioned on top of `header` because of our `z-index` property.
+
+**Tip:** If you have multiple `z` properties in your code, don't pick number like: 1, 2, 3, 4 and so on. Instead choose wider range of numbers like 1, 10, 20 because you'll always have a place to put additional item in between.
+
+> **HTML**
+
+```
+  <nav>
+    <ul>
+      <li>About</li>
+      <li>Home</li>
+      <li>Contact</li>
+    </ul>
+  </nav>
+  <header><h1>Header</h1></header>
+```
+
+> **CSS**
+
+```
+nav {
+  background-color: #c2c1a8;
+  grid-column: 3 / -1;
+  grid-row: 1;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
+```
+
+![z-index](pics/grid-z-index.png)
+
+[To Top](#overview)

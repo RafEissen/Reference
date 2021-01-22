@@ -1,3 +1,7 @@
+/* ////////////////////////////////////////////////////////////////////////////// */
+
+/* grid.html, 1st part */
+
 #page {
   display: grid;
   width: 100%;
@@ -29,3 +33,29 @@
   grid-area: foot;
   background-color: #8cffa0;
 }
+
+/* ////////////////////////////////////////////////////////////////////////////// */
+
+/* grid.html, 2nd part */
+
+/* .wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+  background-color: lightgreen;
+  gap: 0.5rem;
+}
+
+.box1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  gap: 0.5rem;
+}
+
+.box2 {
+  grid-column-start: 1;
+  grid-row-start: 3;
+  grid-row-end: 5;
+} */

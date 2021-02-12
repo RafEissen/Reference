@@ -1397,6 +1397,146 @@ systemd─┬─ModemManager───2*[{ModemManager}]
 
 # //////////////////////////////////////////////////////////// R
 
+# ////// read
+
+Takes the input and saves it into a variable.
+
+## Property Options:
+
+<ins>**-a _array_**</ins>
+
+Assign the input to _array_, starting with index zero.
+
+## Example:
+
+```
+read -a words <<< 'foo\ bar baz'
+declare -p words
+```
+
+### Output:
+
+> declare -a words='([0]="foo bar" [1]="baz")'
+
+Without `-r` bash interprets the backslash as a quating character using it to group **'foo bar'** as a single word. Normally this is not something you want which is why some people will just always use `-r`.
+
+<ins>**-r _array_**</ins>
+
+Raw mode. Do not interpret backslash characters as escapes.
+
+## Using previous example:
+
+```
+read -r -a words <<< 'foo\ bar baz'
+declare -p words
+```
+
+### Output:
+
+> declare -a words='([0]="foo\\" [1]="bar" [2]="baz")'
+
+<ins>**-p _prompt_**</ins>
+
+Display a prompt for input using the string _prompt_. In other words it allows you to specify the prompt.
+
+## Example:
+
+```
+read -p 'Username: ' uservar
+echo
+echo Thankyou $uservar we now have your login details
+```
+
+### Output:
+
+> Username: bergi
+> Thank you Bergi we now have your login details
+
+In this case the promt already has `Username:` specified.
+
+<ins>**-n**</ins>
+
+Read _num_ characters of input, rather than an entire line.
+
+## Example:
+
+This examples reads only 2 characters and stops program.
+
+```
+echo -n "Enter your gender and press [ENTER]: "
+read -n 2 gender
+echo -e "\n$?"
+```
+
+### Output:
+
+> Enter your gender and press [ENTER]: ma
+> 0
+
+<ins>**-s**</ins>
+
+Silent mode. If input is coming from a terminal, characters are not echoed.
+
+## Example:
+
+```
+read -sp 'Password: ' passvar
+echo
+```
+
+### Output:
+
+> Password:
+
+Your password input will not be displayed.
+
+<ins>**-t _seconds_**</ins>
+
+Timeout. Terminate input after _seconds_. <code>read</code> returns a non-zero exit status if an input times out.
+
+## Example:
+
+Here user has to input password under 5 seconds. If password is typed in time, the code exits with 0, otherwise a non-zero value is displayed.
+
+```
+read -t 5 -sp 'Password: ' passvar
+echo -e "\n$?"
+```
+
+### Output:
+
+> Password:
+> 1 (not in time)
+
+<ins>**-u _fd_**</ins>
+
+Use input from file descriptor _fd_, rather than standard input. What are **_file descriptors_**?
+
+A program can produce output on any of several numbered file streams. While we have referred to thefirst three of these file streams as standard input, output, and error, the shell references them internally as file descriptors 0, 1, and 2, respectively. The <ins>shell provides a notation for redirecting files using the file descriptor number</ins>.
+
+The redirection operator
+
+> [n]<>_word_
+
+causes the file whose name is the expansion of _word_ to be opened for both reading and writing in file descriptor _n_, or on file descriptor 0 if _n_ is not specified. If the file does not exist, it is created.
+
+## Example:
+
+First we create an empty file and give it a name _text.txt_. Then we open the file as a file descriptor under number 3 and write "Hello World" in it. In order to read from a file descriptor we use `read -u` command.
+
+```
+touch text.txt
+exec 3<text.txt  # open file as fd 3
+echo "Hello World" > text.txt # write "Hello World"
+read -u 3  # read line from fd 3
+echo ${REPLY}  #output line from fd 3
+exec 3>&-  # close fd 3
+```
+
+If you write something else to "Hello World" line and read from it, the output will show not the whole document but only what you've just written. If you proceed to read the input after closing the file descriptor you will get following message:
+
+> -bash: read: 3: invalid file descriptor: Bad file descriptor
+
 # ////// rm
 
 # Deletes files or directories. Force the deletion, ignoring any errors or warnings
@@ -1521,9 +1661,129 @@ alfones
 
 # Output : (the output gets appended to the .txt file)
 
+# ////// test
+
+Condition evaluation. Evaluate an expression and, if `True`, return a `0`; otherwise `1` (`False`). If there is no expression, test also returns `1`.
+
+## Property Options:
+
+<ins>**-ef**</ins>
+
+Both files have the same inode numbers (the two filenames refer to the same file by hard linking).
+
+## Context:
+
+If you need to maintain two (or more) copies of the same file on the system, instead of having separate physical copies, you can use one physical copy and multiple virtual copies, called _links_.
+A link is a placeholder in a directory that points to the real location of the file.
+
+A _hard link_ creates a separate virtual file that contains information about the original file and where to locate it. However, they are physically the same file.
+
+**Note:** You can only create a hard link between files on the same physical medium. To create a link between files under separate physical mediums, you must use a symbolic link.
+
+## Example:
+
+Let's check if next files are hard links:
+
+```
+a=f.txt
+b=t.txt
+
+if [ $a -ef $b ]; then
+    echo "both are hard links"
+else
+    echo "they are not"
+fi
+```
+
+### Output:
+
+> both are hard links
+
+We can also check if they truly are:
+
+> ls -i
+
+### Output:
+
+> 12885773989 f.txt 12885774016 t.sh 12885773989 t.txt
+
+As we can see both inode numbers are equal and thus they are hard links.
+
+<ins>**-nt**</ins>
+
+Check if _file1_ is newer than _file2_ (date modified).
+
+## Example:
+
+The .sh file is newer than .txt file:
+
+```
+if [ $0 -nt t.txt ]; then
+    echo "the .sh file is newer than the .txt file"
+else
+    echo "the .sh file is older than the other"
+fi
+```
+
+### Output:
+
+> the .sh file is newer than the .txt file
+
+<ins>**-ot**</ins>
+
+Check if _file1_ is older than _file2_.
+
+<ins>**-e -f -d -r -w -x**</ins>
+
+- -e: Checks if _file_ exists
+- -f: Checks if _file_ exists and is a file
+- -d: Checks if _file_ exists and is a directory
+- -r: Checks if _file_ exists and is readable
+- -w: Checks if _file_ exists and is writable
+- -x: Checks if _file_ exists and is executable
+
+## Example:
+
+We want to test file _t.txt_ with following root rights:
+
+> -rw-r--r--
+
+```
+b=t.txt
+
+if [[ -e $b ]]; then
+    if [ -f $b ]; then
+        echo "$b is a regular file"
+    fi
+    if [ -d $b ]; then
+        echo "$b is a directory"
+    fi
+    if [ -r $b ]; then
+        echo "$b is readable"
+    fi
+    if [ -w $b ]; then
+        echo "$b is writable"
+    fi
+    if [ -x $b ]; then
+        echo "$b is executable/searchable"
+    fi
+else
+    echo "$b does not exist"
+    exit 1
+fi
+
+exit
+```
+
+### Output:
+
+> t.txt is a regular file
+> t.txt is readable
+> t.txt is writable
+
 # ////// top
 
-# Let's you monitor the most active processes, updating the display at regular intervals (say, every second). It is a screen-based program that updates the display in place, interactively
+Let's you monitor the most active processes, updating the display at regular intervals (say, every second). It is a screen-based program that updates the display in place, interactively
 
 # ////// touch
 
@@ -1580,15 +1840,95 @@ traceroute to yandex.ru (77.88.55.66), 30 hops max, 60 byte packets
 
 # ////// type
 
-# // Is a shell builtin that displays the kind of command the shell will execute, given a particular command name. Following example shows character 'c' being aliased for command 'clear'
+Is a shell builtin that displays the kind of command the shell will execute, given a particular command name.
 
-> jl@JLs-MacBook-Air copy % type c
+## Example:
 
-# Output : c is an alias for clear
+This shows character 'c' being aliased for command 'clear'
 
-> jl@JLs-MacBook-Air copy % type alias
+```
+type c
+```
 
-# Output : alias is a shell builtin
+### Output:
+
+> c is an alias for clear
+
+## Example No2
+
+```
+type alias
+```
+
+### Output:
+
+> alias is a shell builtin
+
+## Property Options:
+
+<ins>**-a**</ins>
+
+Finds out if given command is disk file, alias, keyword or function. It will display all of the places that contains an executable available including aliases, builtins, and functions.
+
+## Example:
+
+The output will show you that `pwd` is a shell builtin but it is also avaialbe as a standalone `/bin/pwd` executable:
+
+```
+type -a pwd
+```
+
+### Ouput:
+
+> pwd is a shell builtin
+> pwd is /bin/pwd
+
+## Example No2:
+
+Here we use the self-devised function _sehy_ to extract information about it:
+
+```
+> type -a sehy
+```
+
+### Output:
+
+> sehy is a function
+> sehy ()
+
+```
+{
+    echo -n "Search for: ";
+    read;
+    rg "${REPLY}" ~/.bash_history
+}
+```
+
+<ins>**-t**</ins>
+
+Prints a single word which is one of the following:
+
+- alias
+- keyword
+- function
+- builtin
+- file
+
+If the _name_ is not found, then nothing is printed, and an exit status or false is returned.
+
+## Example:
+
+The user has a function named _sehy_ to quickly search the user's bash history. We can check the type of _sehy_ like so:
+
+```
+
+type -t sarf
+
+```
+
+### Output:
+
+> function
 
 # //////////////////////////////////////////////////////////// U
 
@@ -1826,3 +2166,7 @@ Is a powerful program used to find text patterns within files. It's used like th
 > `>` grep _pattern_ _filename_
 
 When
+
+```
+
+```

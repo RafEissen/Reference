@@ -393,9 +393,19 @@ flow.jpg -> empty/flow.jpg
 
 The time is 6:38 PM on a lovely Monday in April
 
-# ////// df
+## ////// declare
 
-# Sometimes, you need to see how much disk space is available on an individual device. The 'df' command allows you to easily see what's happening on all the mounted disks.
+Declare variable(s) and/or give them attributes.
+
+## Property Options:
+
+<ins>**-a**</ins>
+
+Creates an "indexed array" starting at 0.
+
+## ////// df
+
+Sometimes, you need to see how much disk space is available on an individual device. The 'df' command allows you to easily see what's happening on all the mounted disks.
 
 # The command displays the following:
 
@@ -1593,6 +1603,142 @@ remove empty? y
 
 > kali@kali:~\$ sudo shutdown -r
 
+# ////// seq
+
+Print a sequence of numbers to standard output. The sequence starts from one, the number increments by one in each step and prints each number in each line up to the upper limit by default.
+
+## Example:
+
+When only upper limit is used then the number will start from 1 and increment by one in each step. The following command will print the number from 1 to 4.
+
+```
+seq 4
+```
+
+### Output:
+
+> 1
+> 2
+> 3
+> 4
+
+## Example No2:
+
+When two values are used then first value will be used as starting number and second value will be used as ending number. The following command will print the number from 5 to 10.
+
+```
+seq 5 10
+```
+
+### Output:
+
+> 5
+> 6
+> 7
+> 8
+> 9
+> 10
+
+## Example No3:
+
+By using three values then the 2nd value will be used as increment or decrement value for each step. Here, the starting number is 10, ending number is 1 and each step will be counted by decrementing 2.
+
+```
+seq 10 -2 1
+```
+
+### Output:
+
+> 10
+> 8
+> 6
+> 4
+> 2
+
+## Property Options:
+
+<ins>**-w**</ins>
+
+Equalize the widths of all numbers by padding with zeros as necessary.
+
+## Example:
+
+```
+seq -w 0 .05 .1
+```
+
+## Output:
+
+> 0.00
+> 0.05
+> 0.10
+
+<ins>**-s**</ins>
+
+Use _string_ to separate numbers.
+
+## Example:
+
+Separate numbers by adding "-"
+
+```
+seq -s - 5
+echo
+```
+
+### Output:
+
+> 1-2-3-4-5-
+
+<ins>**-f**</ins>
+
+Is used to genereate sequence in a formatted manner.
+
+## Example:
+
+```
+seq -f "%g/04/2018" 5
+```
+
+### Output:
+
+> 1/04/2018
+> 2/04/2018
+> 3/04/2018
+> 4/04/2018
+> 5/04/2018
+
+## Example No2:
+
+The following command is used to fenerate the sequence of floating point number using "%f". Here, the number will start from 3 and increment by .8 in each step and the last number will be less than or equal to 6. The number of digits after point is limited to 2.
+
+```
+seq -f "%.2f" 3 0.8 6
+```
+
+### Output:
+
+> 3.00
+> 3.80
+> 4.60
+> 5.40
+
+<ins>**-t**</ins>
+
+Use _string_ to terminate sequnce of numbers.
+
+## Example:
+
+This line count to 5 and skips at the end the line.
+
+```
+seq -t '\n' -s - 5
+```
+
+### Output:
+
+> 1-2-3-4-5-
+
 # ////// su
 
 # Is used to start a shell as another user. Doesn't work on Mac.
@@ -1685,14 +1831,16 @@ A _hard link_ creates a separate virtual file that contains information about th
 Let's check if next files are hard links:
 
 ```
+
 a=f.txt
 b=t.txt
 
 if [ $a -ef $b ]; then
-    echo "both are hard links"
+echo "both are hard links"
 else
-    echo "they are not"
+echo "they are not"
 fi
+
 ```
 
 ### Output:
@@ -1718,11 +1866,13 @@ Check if _file1_ is newer than _file2_ (date modified).
 The .sh file is newer than .txt file:
 
 ```
+
 if [ $0 -nt t.txt ]; then
-    echo "the .sh file is newer than the .txt file"
+echo "the .sh file is newer than the .txt file"
 else
-    echo "the .sh file is older than the other"
+echo "the .sh file is older than the other"
 fi
+
 ```
 
 ### Output:
@@ -1749,36 +1899,38 @@ We want to test file _t.txt_ with following root rights:
 > -rw-r--r--
 
 ```
+
 b=t.txt
 
-if [[ -e $b ]]; then
-    if [ -f $b ]; then
-        echo "$b is a regular file"
+if [[-e $b]]; then
+if [ -f $b ]; then
+echo "$b is a regular file"
     fi
     if [ -d $b ]; then
         echo "$b is a directory"
-    fi
-    if [ -r $b ]; then
-        echo "$b is readable"
+fi
+if [ -r $b ]; then
+echo "$b is readable"
     fi
     if [ -w $b ]; then
         echo "$b is writable"
-    fi
-    if [ -x $b ]; then
-        echo "$b is executable/searchable"
+fi
+if [ -x $b ]; then
+echo "$b is executable/searchable"
     fi
 else
     echo "$b does not exist"
-    exit 1
+exit 1
 fi
 
 exit
+
 ```
 
 ### Output:
 
-> t.txt is a regular file
-> t.txt is readable
+> t.txt is a regular file <br>
+> t.txt is readable <br>
 > t.txt is writable
 
 # ////// top
@@ -1847,7 +1999,9 @@ Is a shell builtin that displays the kind of command the shell will execute, giv
 This shows character 'c' being aliased for command 'clear'
 
 ```
+
 type c
+
 ```
 
 ### Output:
@@ -1857,7 +2011,9 @@ type c
 ## Example No2
 
 ```
+
 type alias
+
 ```
 
 ### Output:
@@ -1875,7 +2031,9 @@ Finds out if given command is disk file, alias, keyword or function. It will dis
 The output will show you that `pwd` is a shell builtin but it is also avaialbe as a standalone `/bin/pwd` executable:
 
 ```
+
 type -a pwd
+
 ```
 
 ### Ouput:
@@ -1888,7 +2046,9 @@ type -a pwd
 Here we use the self-devised function _sehy_ to extract information about it:
 
 ```
+
 > type -a sehy
+
 ```
 
 ### Output:
@@ -1897,11 +2057,13 @@ Here we use the self-devised function _sehy_ to extract information about it:
 > sehy ()
 
 ```
+
 {
-    echo -n "Search for: ";
-    read;
-    rg "${REPLY}" ~/.bash_history
+echo -n "Search for: ";
+read;
+rg "${REPLY}" ~/.bash_history
 }
+
 ```
 
 <ins>**-t**</ins>
@@ -2164,9 +2326,3 @@ Saving to: ‘3aMrz8p’
 Is a powerful program used to find text patterns within files. It's used like this
 
 > `>` grep _pattern_ _filename_
-
-When
-
-```
-
-```
